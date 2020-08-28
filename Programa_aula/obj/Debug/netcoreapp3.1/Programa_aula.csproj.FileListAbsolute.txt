@@ -1,0 +1,13 @@
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\bin\Debug\netcoreapp3.1\Programa_aula.exe
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\bin\Debug\netcoreapp3.1\Programa_aula.deps.json
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\bin\Debug\netcoreapp3.1\Programa_aula.runtimeconfig.json
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\bin\Debug\netcoreapp3.1\Programa_aula.runtimeconfig.dev.json
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\bin\Debug\netcoreapp3.1\Programa_aula.dll
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\bin\Debug\netcoreapp3.1\Programa_aula.pdb
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\obj\Debug\netcoreapp3.1\Programa_aula.csprojAssemblyReference.cache
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\obj\Debug\netcoreapp3.1\Programa_aula.AssemblyInfoInputs.cache
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\obj\Debug\netcoreapp3.1\Programa_aula.AssemblyInfo.cs
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\obj\Debug\netcoreapp3.1\Programa_aula.csproj.CoreCompileInputs.cache
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\obj\Debug\netcoreapp3.1\Programa_aula.dll
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\obj\Debug\netcoreapp3.1\Programa_aula.pdb
+C:\Users\Otávio estudos\Desktop\Aulas Devdojo\C-Sharp\Programa_aula\obj\Debug\netcoreapp3.1\Programa_aula.genruntimeconfig.cache
