@@ -1,0 +1,56 @@
+1.Faça um programa que lê uma temperatura em
+graus Celsius e apresenta-a convertida em graus
+Fahrenheit. A fórmula de conversão: F ←
+(9*C+160)/5
+
+2.Faça um programa que lê um valor de salário
+mínimo e o salário de um funcionário. O programa
+deve calcular e imprimir quantos salários mínimos
+esse funcionário ganha.
+
+3.Faça um programa que leia os valores dos lados e
+altura de um triângulo, calcule e imprima seu
+perímetro e área.
+
+4. Faça um programa que leia um número inteiro
+e imprima o seu antecessor e sucessor.
+
+5. Construa um programa que aplique um
+desconto de 25% sobre o preço de um
+produto recebido como entrada e imprima o
+valor resultante.
+
+6. Construa um programa para ler um intervalo
+de tempo em segundos, converter para
+horas, minutos e segundos e imprimir o
+resultado.
+
+
+1. Fazer um programa para imprimir na primeira linha o
+dia, na segunda linha o mês e na terceira o ano de seu
+nascimento.
+2. Imprimir o valor 2.346728 com 1, 2, 3 e 5 casas
+decimais.
+
+3. Fazer um programa para ler o valor de um produto (em
+reais) e o valor de um desconto (em reais). Imprima o
+valor do produto após a aplicação do desconto. Dica:
+declare duas variáveis: valorProduto e valorDesconto,
+sendo ambas do tipo double. Exemplo de leitura da
+variável valorProduto:
+valorProduto = Convert.ToDouble(Console.ReadLine())
+
+
+1. Escreva um programa para efetuar as quatro operações
+matemáticas básicas (adição, subtração, produto e divisão)
+sobre dois valores informados.
+
+2. Elaborar um programa que calcule o índice de massa corporal
+(IMC) de um usuário qualquer, sabendo-se que o IMC é
+determinado pela divisão da massa do indivíduo (em
+quilogramas) pelo quadrado de sua altura (em metros).
+
+3. Elaborar um programa que calcule e apresente o volume de uma
+caixa retangular, por meio da fórmula:
+
+volume = comprimento*largura*altura.
