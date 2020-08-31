@@ -16,10 +16,12 @@ class Exercicio3 {
 		
 		//descobrindo a base (o maior lado)
 		int bbase; //n pode. base é palavra reservada
-		bbase = 0; //não pode haver o risco de ela ficar sem valor
+		bbase = lado1; //não pode haver o risco de ela ficar sem valor
 		/*if (lado1 == lado2 == lado3){
 			bbase = lado1;
 		}*/
+		/*if (lado1 == lado2 && lado1 == lado3 && lado2 == lado3){
+			bbase = lado1; não precisa*/
 		
 		if (lado1 > lado2 && lado1 > lado3){
 			bbase = lado1;

@@ -26,13 +26,13 @@ horas, minutos e segundos e imprimir o
 resultado.
 
 
-1. Fazer um programa para imprimir na primeira linha o
+7. Fazer um programa para imprimir na primeira linha o
 dia, na segunda linha o mês e na terceira o ano de seu
 nascimento.
-2. Imprimir o valor 2.346728 com 1, 2, 3 e 5 casas
+8. Imprimir o valor 2.346728 com 1, 2, 3 e 5 casas
 decimais.
 
-3. Fazer um programa para ler o valor de um produto (em
+9. Fazer um programa para ler o valor de um produto (em
 reais) e o valor de um desconto (em reais). Imprima o
 valor do produto após a aplicação do desconto. Dica:
 declare duas variáveis: valorProduto e valorDesconto,
@@ -41,16 +41,16 @@ variável valorProduto:
 valorProduto = Convert.ToDouble(Console.ReadLine())
 
 
-1. Escreva um programa para efetuar as quatro operações
+10. Escreva um programa para efetuar as quatro operações
 matemáticas básicas (adição, subtração, produto e divisão)
 sobre dois valores informados.
 
-2. Elaborar um programa que calcule o índice de massa corporal
+11. Elaborar um programa que calcule o índice de massa corporal
 (IMC) de um usuário qualquer, sabendo-se que o IMC é
 determinado pela divisão da massa do indivíduo (em
 quilogramas) pelo quadrado de sua altura (em metros).
 
-3. Elaborar um programa que calcule e apresente o volume de uma
+12. Elaborar um programa que calcule e apresente o volume de uma
 caixa retangular, por meio da fórmula:
 
 volume = comprimento*largura*altura.
