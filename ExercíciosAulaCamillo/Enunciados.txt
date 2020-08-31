@@ -51,6 +51,6 @@ determinado pela divisão da massa do indivíduo (em
 quilogramas) pelo quadrado de sua altura (em metros).
 
 12. Elaborar um programa que calcule e apresente o volume de uma
-caixa retangular, por meio da fórmula:
+caixa retangular
 
-volume = comprimento*largura*altura.
+FEITO DO 1 AO 12 (09:30 31/08/2020)
