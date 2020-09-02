@@ -12,5 +12,6 @@ class Exercicio6{
 		int minutosRestantes = minutos % 60; 
 		
 		Console.WriteLine("{0} segundos são o mesmo que {1} horas, {2} minutos e {3} segundos.", segundosEntrada, horas, minutosRestantes, segundosRestantes);
-}}
+	}
+}
 		

@@ -18,4 +18,5 @@ class Exercicio11 {
 /*erros: Convert.ToDouble - esqueci do ponto
 	não fechei esse comentário
   dúvidas: Existe operação de exponenciação? tipo ** ou ^
+  Math.Pow(altura, 2); -> elevar altura ao quadrado
 */

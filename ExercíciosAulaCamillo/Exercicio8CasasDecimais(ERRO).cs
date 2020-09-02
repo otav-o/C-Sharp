@@ -5,6 +5,6 @@ class Exercicio8{
 	public static void Main(String[] args){
 		Console.Write("Digite um valor com muitas casas decimais: ");
 		float valor = Convert.ToSingle(Console.ReadLine());
-		Console.WriteLine("Número: {0}.\nCom 1 casa decimal: {0; f1}.\nCom duas casas: {0; f2}.\nCom 3 casas: {0; f3}.\nCom 5 casas: {0; f5}.", valor);
+		Console.WriteLine("Número: {0}.\nCom 1 casa decimal: {0; N1}.\nCom duas casas: {0; N2}.\nCom 3 casas: {0; N3}.\nCom 5 casas: {0; f5}.", valor);
 	}
 }
