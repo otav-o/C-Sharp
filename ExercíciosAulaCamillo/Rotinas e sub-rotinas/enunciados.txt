@@ -1,0 +1,27 @@
+1) Faça um procedimento que receba três valores
+reais e imprima a média aritmética desses valores.
+2) Faça uma função que receba o valor de um produto
+e um percentual de desconto. A função deve retornar
+o valor do produto após a aplicação do desconto.
+3) Faça uma função que receba o valor de um produto
+e um percentual de acréscimo. A função deve retornar
+o valor do produto após a aplicação do acréscimo.
+4) Escreva um procedimento que recebe dois
+números inteiros e imprime, a soma, o produto, a
+diferença, o quociente e o resto entre esses dois
+números.
+
+Exercícios
+
+5) Considerando a fórmula para o cálculo da distância
+entre dois pontos (x1, y1) e (x2,y2):
+a) Escreva uma função que receba como
+parâmetros as coordenadas de dois pontos e
+retorne a distância entre eles.
+b) Escreva um programa C# (função principal) que
+capture do teclado as coordenadas dos 3
+vértices de um triângulo, calcule e imprima o
+perímetro deste triângulo. Este programa deve
+utilizar a função do item anterior.
+
+Variáveis
