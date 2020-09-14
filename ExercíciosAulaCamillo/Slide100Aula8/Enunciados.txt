@@ -1,0 +1,53 @@
+1) Faça um procedimento que receba por parâmetro
+o tempo de duração de um experimento expresso
+em segundos e imprima na tela esse mesmo tempo
+em horas, minutos e segundos.
+2) Faça uma função que receba por parâmetro o raio
+de uma esfera e calcule o seu volume:
+v = (4 * PI * R3
+
+) /3.
+
+3) Faça uma função que receba a idade de uma
+pessoa em anos, meses e dias e retorne essa idade
+expressa em dias.
+
+Exercícios
+
+4) Faça uma função que receba dois números reais, a e b, e
+retorne o valor de ( A2 + B2
+)
+1/2.
+
+Observação: para calcular a raiz quadrada será preciso
+utilizar a função Math.Sqrt().
+
+5) Considere as equações de movimento para calcular a
+posição (s) e velocidade (v) de uma partícula em um
+determinado instante t, dado sua aceleração a, posição inicial
+s0 e velocidade inicial v0, de acordo com as fórmulas:
+
+s = s0 + v0*t + (a * t * t)/2
+v = v0 + a*t
+
+Escreva um programa C# completo que capture os valores
+de s0, v0, a e t, fornecidos pelo usuário via teclado, e calcule
+e imprima os valores de s e v.
+
+Exercícios
+
+6) Considerando o critério de aprovação de uma disciplina
+que determina que um aluno está aprovado se a média
+ponderada de suas três provas for maior ou igual a 5.0, onde
+a média é dada pela fórmula:
+
+Média = (P1 + P2 + 2.0 * P3) / 4.0
+
+(a) Escreva uma função que receba como parâmetros as notas das
+duas primeiras provas de um aluno (P1 e P2) e retorne a nota
+mínima que o aluno precisa tirar na terceira prova para que seja
+aprovado.
+(b) Escreva um programa em C# completo que leia do teclado as duas
+primeiras notas de um aluno, calcule e imprima a nota mínima que
+o aluno precisa tirar na P3 para que seja aprovado. Este programa
+deve fazer uso da função do item anterior.
