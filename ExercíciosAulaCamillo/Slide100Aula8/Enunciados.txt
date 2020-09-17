@@ -51,3 +51,5 @@ aprovado.
 primeiras notas de um aluno, calcule e imprima a nota mínima que
 o aluno precisa tirar na P3 para que seja aprovado. Este programa
 deve fazer uso da função do item anterior.
+
+TERMINEI EM 14:07 17/09/2020, quinta.

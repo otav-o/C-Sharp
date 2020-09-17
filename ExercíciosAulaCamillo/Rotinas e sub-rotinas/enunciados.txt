@@ -24,4 +24,3 @@ vértices de um triângulo, calcule e imprima o
 perímetro deste triângulo. Este programa deve
 utilizar a função do item anterior.
 
-Variáveis

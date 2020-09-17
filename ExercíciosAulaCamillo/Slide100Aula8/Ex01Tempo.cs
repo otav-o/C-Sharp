@@ -8,8 +8,8 @@ public class Ex01 {
 		int horas = minutos / 60;
 		int minutosRestantes = minutos % 60;
 
-		Console.WriteLine("{0} segundos são o mesmo que {1} horas, {2} minutos e {3} segundos.", horas, minutosRestantes, segundosRestantes);
-}
+		Console.WriteLine("{0} segundos são o mesmo que {1} horas, {2} minutos e {3} segundos.", segundos, horas, minutosRestantes, segundosRestantes);
+	}
 
 
 	static void ConversorTempoCamillo(int totalSegundos) {
@@ -20,4 +20,14 @@ public class Ex01 {
 		minutos = totalSegundos / 60;
 		segundos = totalSegundos % 60;
 
-		Console.WriteLine({0} horas
+		Console.WriteLine("{0}:{1}:{2}", horas, minutos, segundos);
+	}
+
+	public static void Main(String[] args) {
+		Console.Write("Insira a quantidade de segundos: ");
+		int a = Convert.ToInt32(Console.ReadLine());
+		ConversorTempo(a); ConversorTempoCamillo(a);
+	}
+
+// feito.
+}
