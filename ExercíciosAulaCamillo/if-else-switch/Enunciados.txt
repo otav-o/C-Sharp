@@ -1,0 +1,141 @@
+1) Ler dois números inteiros e informar se o
+primeiro valor lido é maior, menor ou igual
+ao segundo.
+
+2) Ler um número inteiro e informar se ele é
+divisível por 2.
+
+3) Altere o algoritmo anterior para que seja
+informado se o número é divisível por 2 e
+por 3 simultaneamente.
+
+45
+
+Exercícios
+
+4) Altere o algoritmo anterior para que seja
+informado se o número é divisível por 2 e
+por 3, mas que não seja divisível por 5.
+
+5) Desenvolver um algoritmo para ler o número
+do dia da semana e imprimir o seu
+respectivo nome por extenso. Considerar o
+número 1 como domingo, 2 para segunda
+etc. Caso o dia da semana não exista
+(menor do que 1 ou maior do que 7), exibir a
+mensagem “Dia da semana inválido". 46
+
+Exercícios
+
+6) Fazer um algoritmo para ler dois números e
+um dos símbolos das operações: +, -, * e /.
+Imprimir o resultado da operação efetuada
+sobre os números lidos.
+
+7) Desenvolver um algoritmo para ler o valor
+inteiro da idade de uma pessoa e imprimir
+uma das mensagens: se idade < 13:
+Criança, se 13 ≤ idade < 20: Adolescente,
+se 20 ≤ idade < 60: Adulto e se idade ≥ 60:
+Idoso.
+
+47
+
+Exercícios
+
+8) Elaborar um algoritmo para ler o código
+de um produto e informar a sua origem:
+a) Código do produto entre 1 e 20: Europa
+b) Código do produto entre 21 e 40: Ásia
+c) Código do produto entre 41 e 60: América
+d) Código do produto entre 61 e 80: África
+e) Código do produto maior que 80: Paraguai
+
+48
+
+Exercícios
+
+9) Para auxiliar os vendedores de uma loja na
+orientação aos clientes sobre as diversas
+formas de pagamento, desenvolver um
+algoritmo para:
+
+49
+
+a) Imprimir o seguinte menu:
+
+b) Ler o código da opção de pagamento.
+
+Forma de pagamento:
+- À vista.
+- Cheque para trinta dias.
+- Em duas vezes.
+- Em três vezes.
+- Em quatro vezes.
+- A partir de cinco vezes.
+Entre com sua opção:
+
+Exercícios
+
+c) Imprimir uma das mensagens de acordo com
+a opção lida:
+
+50
+
+Opção = 1: Desconto de 20%
+Opção = 2, 3 ou 4: Mesmo preço a vista
+Opção = 5: Juros de 3% ao mês
+Opção = 6: Juros de 5% ao mês
+Opção <1 ou opção >6: Opção inválida
+1. Faça um programa que leia dois números
+inteiros e faça a divisão do primeiro pelo
+segundo (se o segundo for diferente de
+zero).
+
+2. Faça um programa para ler dois números
+reais e verificar se ambos são maiores que
+zero. Caso positivo, informar “Valores são
+válidos”. Caso contrário, informar “Valores
+inválidos”.
+
+61
+
+Exercícios
+
+3. Tendo como dados de entrada a altura e o
+sexo de uma pessoa, construa um
+programa que calcule seu peso ideal,
+utilizando as seguintes fórmulas:
+para homens: (72.7*h)-58
+para mulheres: (62.1*h)-44.7
+
+4. Faça um programa que leia 3 comprimentos
+(x, y e z) e responda se eles formam um
+triângulo, ou seja, se
+x < y + z e y < x + z e z < x + y.
+
+62
+
+Exercícios
+
+5. Faça um programa para ler um caractere e
+imprimir as seguintes mensagens, segundo o
+caso:
+• “Sinal de menor”
+• “Sinal de maior”
+• “Sinal de igual”
+• “Outro caractere”
+
+63
+
+Exercícios
+
+6. Elabore um programa que, dada a idade
+de um nadador, classifique-o em uma
+das seguintes categorias:
+• infantil A = 5 – 7 anos
+• infantil B = 8 – 10 anos
+• juvenil A = 11 – 13 anos
+• juvenil B = 14 – 17 anos
+• adulto = 18 – 30 anos
+• sênior = maiores de 30 anos
