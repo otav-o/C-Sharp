@@ -5,7 +5,8 @@ static void Main() {
 	double valorCompra = 5.50;
 	double valorVenda; // se não atribuir dá erro
 	double lucro = 0.1;
-	valorVenda = valorCompra *= lucro;	// a impressão não respeita a posição da vírgula, corrija isso.
+	valorVenda = valorCompra + valorCompra * lucro;
+	//valorVenda = valorCompra *= lucro;	// nada a ver
 
 	Console.WriteLine("O valor da compra é:\t\t{0}\nO valor da venda é:\t\t{1}\nO lucro é:\t\t{2}", valorCompra, valorVenda, lucro);
 	// \t adiciona tabulação, \n quebra a linha
