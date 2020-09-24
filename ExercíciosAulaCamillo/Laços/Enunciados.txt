@@ -1,1 +1,59 @@
 1- Fazer um algoritmo que imprima todos os números pares no intervalo de 1 a 100;
+
+2. Fazer um algoritmo que imprima todos os números de 100 até 1;
+
+3. Ler um número inteiro e positivo e verificar se este é ou não um número primo.
+
+4. Dada uma dívida de 10000 reais que cresce a juros de 2,5% ao mês e uma aplicação de 1500 reais com rendimento de 4% ao mês, escrever um algoritmo que determina o número de meses necessários para pagar a dívida.
+
+5. Calcular o valor de S:
+
+S=2/50 + (2^2)/48 + (2^3)/46 + ... + (2^25)/2
+
+6) Escrever um algoritmo que lê um valor N inteiro e positivo e que calcula e
+escreve o valor de E.
+
+E = 1 + 1/2 + 1/3 + ... + 1/N
+
+7) Escreva um algoritmo que leia 10 valores (usando a mesma variável) e
+encontre o maior e o menor deles. Mostre o resultado.
+
+8) Chico tem 1,50 metros e cresce 2 centímetros por ano, enquanto Zé tem 1,40
+metros e cresce 3 centímetros por ano. Construa um algoritmo que calcule e
+imprima quantos anos serão necessários para que Zé seja maior que Chico.
+
+9) Escreva um algoritmo que leia a matrícula de um aluno e suas três notas.
+Calcule a média ponderada do aluno, considerando que o peso para a maior
+nota seja 4 e para as duas restantes, 3. Mostre ao final a média calculada e
+uma mensagem "APROVADO" se a média for maior ou igual a 5 e "REPROVADO" se a média for menor que 5. Repita a operação até que o código lido seja negativo.
+
+10) Escrever um algoritmo que lê um valor N inteiro e positivo e que calcula e
+escreve o valor de E.
+
+E = 1 + 1/1! + 1/2! + 1/3! + ... + 1/N!
+
+Exercícios
+
+11) Faça um programa que, dado um conjunto de valores inteiros e positivos
+(fornecidos um a um pelo usuário), determine qual o menor valor do conjunto.
+O final do conjunto de valores é conhecido através do valor zero, que não
+deve ser considerado.
+
+12) A conversão de graus Fahrenheit para Centígrados é obtida pela fórmula
+C = 5/9(F – 32). Escreva um programa que calcule e escreva uma tabela de
+graus centígrados em função de graus Fahrenheit que variem de 50 a 150 de
+1 em 1.
+
+13) Elabore um programa que calcule N! (fatorial de N), sendo que o valor inteiro
+de N é fornecido pelo usuário. Sabendo que:
+N! = N x (N-1) x (N-2) x ... x 3 x 2 x 1;
+0! = 1, por definição.
+
+14) Fazer um programa para calcular e mostrar os N primeiros termos da série
+de Fibonacci. O número N é fornecido pelo usuário. A série de Fibonacci é
+gerada da seguinte forma:
+f1 = f2 = 1;
+f3 = f1 + f2 = 2;
+f4 = f2 + f3 = 3;....
+O primeiro e segundo termos valem 1 e os seguintes são calculados
+somando os dois termos anteriores.
