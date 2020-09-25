@@ -14,6 +14,6 @@ public class Aula009 {
 		const int numero = 4;
 		Console.WriteLine("{0} x 2 = {2}\n{1} / 2 = {3}\n{1} x 4 = {4}", n1, n2, dobroN1, metadeN2, quadruploN2);
 }
-}
+} // ok
 		
 		

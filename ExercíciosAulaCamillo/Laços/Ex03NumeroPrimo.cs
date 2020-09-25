@@ -17,6 +17,22 @@ static void Main() {
 		Console.WriteLine("{0} não é primo.", numero);
 }
 } // funciona bem
+
+/*
+static void Main(string[] args) {
+inf numero, divisor, qtdeDivisores = 0;
+Console.Write("Informe um inteiro positivo: ");
+numero = Convert.ToInt32(Console.ReadLine());
+
+for (divisor = 1; divisor <= numero; divisor++) {
+if (numero % divisor == 0)
+	qtdeDivisores++;
+if (qtdeDivisores == 2)
+	Console.WriteLine("{0} é primo.", numero);
+else
+	Console.WriteLine("{0} NÃO é primo.", numero);
+
+o legal é testar até n/2 */
 		
 			
 		

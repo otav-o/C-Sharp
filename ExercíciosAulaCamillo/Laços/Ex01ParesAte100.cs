@@ -9,3 +9,12 @@ public static void Main(String[] args) {
 		}
 	}
 }} // funciona
+
+/* 
+while (numero <= 100)	// deve inicializar e atribuir antes
+{
+	if (numero % 2 == 0)
+		Console.WriteLine(numero);
+	numero++;
+}
+tambem fazer de 2 em 2*/
