@@ -12,14 +12,14 @@ public static void Main(String[] args) {
 	double dinheiroAplicado = Convert.ToDouble(Console.ReadLine());
 	Console.Write("E quanto de juros isso rende a.m.? ");
 	double rendimentoAplicacao = Convert.ToDouble(Console.ReadLine());
-	double meses;
+	double meses = 0;
 
 	/*10000 + 10000 * 0.025 ^ meses = 1500 + 1500 * 0.04 ^ meses
 	valorDivida * Math.Pow(taxaJuros, meses) == dinheiroAplicado * Math.Pow(rendimentoAplicacao, meses); 
 	acho que n da para fazer equação*/
 
 	while (true) {
-		meses = 0;
+		
 		valorDivida *= taxaJuros;
 		dinheiroAplicado *= rendimentoAplicacao;
 		if (valorDivida <= dinheiroAplicado)
