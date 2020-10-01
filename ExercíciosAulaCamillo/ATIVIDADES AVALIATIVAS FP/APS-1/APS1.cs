@@ -9,6 +9,7 @@ public static void Main(String[] args) {
 	double pesoParcial = 0;
 
 	while (true) {
+
 		Console.Write("Digite o nome do ciclista: ");
 		String nome = Console.ReadLine();
 		Console.Write("Qual o máximo que {0} pode carregar? (kg) ", nome);

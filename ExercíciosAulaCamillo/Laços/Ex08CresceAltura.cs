@@ -5,8 +5,8 @@ public class Ex08 {
 
 public static void Main (String[] args) {
 
-	double alturaChico = 1.5;
-	double alturaZe = 1.4;
+	double alturaChico = 1.5, alturaZe = 1.4;
+
 	double crescimentoChico = 0.02;
 	double crescimentoZe = 0.03;
 	int anosPassados = 0;
@@ -22,6 +22,8 @@ public static void Main (String[] args) {
 	Console.WriteLine("Após " + anosPassados + " anos, Zé será maior que Chico.");
 
 }
-}  // minha resposta: 11 anos. 
+}  // minha resposta: 11 anos. - correto
+
+/*for (qtdeanos = 0; alturaChico >= alturaZe; alturaChico += 0.02, alturaZe += 0.03, qtdeanos++)*/
 
 	
