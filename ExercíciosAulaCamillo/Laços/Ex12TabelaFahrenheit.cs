@@ -5,21 +5,22 @@ using System;
 public class Ex12 {
 
 public static double ParaGrausCentigrados (double fahrenheit) {
-	double centigrados = 5 / 9 * (fahrenheit - 32);
+	double centigrados = (double) 5 / 9 * (fahrenheit - 32); // tava dando 0 direto pois divisão inteira 5/9 é 0.
 	return centigrados;
 }
 
 public static void Main (String [] args) {
 
-	//int f = 50;	// não pode atribuir antes?? eu sei que f é local no for
-
+	//int f = 50;	// não pode atribuir antes pois f é local no for (confirmar)
 	
 	
 	for (int f = 50; f < 151; f++) {
-		Console.WriteLine("{0}°F = {1}°C", f, ParaGrausCentigrados(Convert.ToDouble(f)));
+		Console.WriteLine("{0}°F = {1:N2}°C", f, ParaGrausCentigrados(f)); // não precisei converter para double
 	}
 
+	Console.WriteLine(ParaGrausCentigrados(41));
+
 }
-}
+} // feito
 	
 	
