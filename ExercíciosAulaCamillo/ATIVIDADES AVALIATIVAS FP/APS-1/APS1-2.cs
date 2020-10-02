@@ -16,7 +16,7 @@ public static void Main (String[] args) {
 
 	String nome = "";
 
-	double maiorEntrega = 0;	// não consegui fugir disso
+	double maiorEntrega = 0;	
 	
 	String maiorNome = "";
 
@@ -32,10 +32,12 @@ public static void Main (String[] args) {
 		pesoMaximo = Convert.ToDouble(Console.ReadLine());
 
 		int i = 1;
+		
+		pesoEntrega = 0;
 
 
 		do {
-
+			
 	
 			Console.Write("Digite o peso da encomenda {0}: ", i);
 	
@@ -76,5 +78,5 @@ public static void Main (String[] args) {
 	
 	Console.WriteLine("O entregador {0} carregou o maior peso, {1} kg no total.", maiorNome, maiorEntrega);
 }
-}
+} // terminei e entreguei esse daqui
 

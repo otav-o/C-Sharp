@@ -1,3 +1,5 @@
+/* versão ruim e errada. Entreguei o outro código (APS1-2.cs). tchau */
+
 using System;
 public class Aps1 {
 public static void Main(String[] args) {
