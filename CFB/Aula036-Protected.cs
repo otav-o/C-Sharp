@@ -19,9 +19,10 @@ class Doce {	// base
     	}
 }
 
-class DoceFesta:Doce { // derivada de veículo
+class DoceFesta:Doce { // derivada de Doce
     	public string nome;
-    	public DoceFesta(string nome, int s):base(int s) { 	// o valor será passado para o Doce(int sodio)
+
+    	public DoceFesta(string nome, int s):base(s) { 	// o valor será passado para o Doce(int sodio)
 
         	this.nome = nome;
    		// sodio = s não pode (private)
@@ -52,12 +53,12 @@ class Aula36 {
 
         	Console.WriteLine(d2.acucar); // 0
         	// Console.WriteLine(d2.sodio); // erro; sodio é privado
-        	Console.WriteLine(d2.getSodio); // 30
+        	Console.WriteLine(d2.getSodio()); // 30
         	Console.WriteLine(d2.nome); // Goiabada
         
-        	// Console.WriteLine(d2.saudavel); // erro, é protected
+        	// Console.WriteLine(d2.saudavel); // erro, é protected (apesar de ser acessado na classe derivada)
         
-        	Console.WriteLine(d2.getSaudavel) // true
+        	Console.WriteLine(d2.getSaudavel()); // true pois a classe derivada definiu assim
         
         
     	}
