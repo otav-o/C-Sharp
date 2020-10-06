@@ -439,13 +439,13 @@ vetor.GetValue(indice);
 - retorna object. indice é long. também serve para matriz
 
 
-```
+```c#
 Array.IndexOf(vetor, valor);
 ```
 - posição da primeira ocorrência. -1 se não existir. somente para vetor unidimensional.
 
 
-```
+```c#
 Array.Reverse(vetor);
 
 vetor.SetValue(object valor, long indice);
@@ -980,11 +980,156 @@ Ref.info();	// "Derivada2"
 
 - Classe abstrata: classe de referência/base para outras classes que vão herdar dela.
   - Não dá para instanciar objetos!
-- Em métodos abstratos, não se implementa o comportamento, cria-se apenas o protótipo que vai servir como referência para as classes herdeiras. Não há conteúdo.
-  - Obriga que as classes derivadas implementem os métodos (conteúdo)
+  - Não pode ser `sealed` ou `abstract`
+- Em métodos abstratos, não se implementa o comportamento, cria-se apenas o protótipo que vai servir como guia para as classes herdeiras. Não há conteúdo.
+  - Obriga que as classes derivadas implementem os métodos
 - Métodos não abstratos: contém a implementação, que é obrigatória.
 - Esqueceu? [Veja aqui](#Tipos Classe)
 
-> 'Livro.aumentarPeso(int)' não pode declarar um corpo porque está marcado como abstract
->
-> 'Revista' não implementa o membro abstrato herdado 'Livro.aumentarPeso(int)'
+```c#
+abstract public void aumentarPeso(int peso);
+```
+
+```c#
+override public void aumentarPeso(int peso){
+    this.peso += peso;
+}
+```
+
+- Resumo: é um guia, obriga implementação, não tem código, usar ponto e vírgula.
+
+---
+
+### Aula 40 - Classes Sealed
+
+- Classe selada: não pode ser herdada.
+
+```c#
+sealed class Comida {
+```
+
+- Dá para instanciar objetos normalmente, só não pode usá-la como base.
+
+---
+
+### Aula 41 - Acessors GET e SET
+
+- Propriedade especial e flexível
+- É possível ler, atribuir ou calcular pela propriedade Acessor
+- Tem comportamento de método
+- Não é obrigatório implementar um `get` (read) e um `set` (write) juntos
+- Obs.: `value` é o valor atribuído à propriedade.
+
+```c#
+public int pes {	// não possui parâmetros
+    
+	get {
+		return peso;
+	}
+    
+	set {			// não confundir pes com peso!
+		if (value < 0) peso = 0;
+		else if (value > 200) peso = 200;
+		else peso = value;
+        
+	}  				// set não tem return
+}
+```
+
+```c#
+bicho.pes = 140;	// usa o acessor set
+Console.WriteLine("Peso: " + bicho.pes); // usa o get
+```
+
+---
+
+### Aula 42 - Indexadores de Classes
+
+- Membro de uma classe que <u>permite que os objetos</u> dela possam ser indexados como arrays.
+- Aplicação (ex.): valores diferentes em situações diferentes
+- Obs.: `this` é o que indexa
+- Dúvidas: 1) onde está a referência no cabeçalho do indexador de que é o peso a ser indexado e acessado pelos objetos? 2) só pode um indexador por classe? poderia ter bicho.peso[1] e bicho.altura[2]?
+
+```c#
+private int[] peso = new int[5]{80, 120, 160, 240, 300};
+```
+
+```c#
+public int this[int i] { // indexador 
+		
+	get {
+		return peso[i];
+	}
+
+	set {	
+		if (value < 0)
+			peso[i] = 0;
+		else if (value > 200)
+			peso[i] = 200;
+		else 
+            peso[i] = value;
+	}
+}
+```
+
+```c#
+Console.WriteLine("Peso: " + bicho[2]);
+bicho[2] = 140;
+Console.WriteLine("Peso: " + bicho[2]);
+```
+
+---
+
+### Aula 43 - Interfaces
+
+- **Interfaces só possuem as assinaturas dos métodos.** Não possuem propriedades, não dá para declarar ou atribuir variável, não pode ter construtor ou destrutor, não define membros static ou método operator. Muito parecido com classe [static](#Tipos Classe).
+
+```c#
+public interface Veiculo {
+```
+
+- Toda classe que usar uma interface precisa obrigatoriamente implementar seus métodos.
+- Uma classe pode herdar múltiplas interfaces
+
+```c#
+class Carro:Veiculo, Combate{
+```
+
+- Se definir a herança mas não implementar: dá erro.
+
+
+> error CS0535: 'Carro' não implementa o membro de interface 'Veiculo.ligar()'
+
+- Pode ser implementado e não executar nenhum comando
+
+```c#
+public void info() {}
+```
+
+---
+
+### Aula 44 - Struct
+
+- Estrutura é um tipo especial que permite o armazenamento de diferentes tipos de dados. É mais simples e se parece com classe.
+- Como **não é classe**, não pode herdar nem servir como base
+  - Mas pode ter construtores
+  - Construtor vai ser chamado desde que o operador new seja usado na instanciação do objeto (como já sabemos)
+
+```c#
+struct Carro {
+```
+
+```c#
+Carro c1;				// sem chamar o construtor
+c1.marca = "Nissan"		// nesse caso marca é public
+```
+
+```c#
+Carro c2 = new Carro("Nissan ", "Versa rebaixado ", "Azul ");
+// chamando o construtor
+```
+
+---
+
+### Aula 45 - Array de estruturas
+

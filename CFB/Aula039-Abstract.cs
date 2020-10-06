@@ -11,31 +11,46 @@ abstract class Livro {	// classe base abstrata
 		atual = false;
 		peso = 0;
 	}
+
+
 	public void setAtual(bool atual) { // atualizar e setAtual seriam a mesma coisa
 		this.atual = atual; // funcionalidade deve ser implementada
 	}
 
-	abstract public void aumentarPeso(int peso);
+
+	public int getPeso() {
+		return peso;
+	}
+
+
+	abstract public void aumentarPeso(int peso); // setVelAtual
 		// this.peso += peso; // não pode pois é abstract. Deixar com ponto e vírgula, jamais com chaves
 	
 }
 
 class Revista:Livro {
+
 	public Revista() {
+		quantidadePaginas = 120;
 		atual = true;
 	}
 
 	override public void aumentarPeso(int peso) {
 		this.peso += peso;
-	} // sem isso não compila
+	} 
+	// sem isso não compila
 	
-} bom dia meus amigos como vão vocês??
+}
 
 class Aula39 {
 static void Main () {
 
 	// Livro livro = new Livro(); // não dá para instanciar
 
-	Livro livro = new Livro();
+	Revista livro1 = new Revista();
+
+	Console.WriteLine(livro1.getPeso());	//0
+	livro1.aumentarPeso(50);
+	Console.WriteLine(livro1.getPeso());
 }
 }
