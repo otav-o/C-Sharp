@@ -2,11 +2,9 @@
 
 - **As coisas ficam mais legais a partir da *aula 9***
 
-- **Não está muito didático, então deixe isso aqui para revisão**
-
 - **Veja os códigos das aulas na pasta [CFB](CFB/)**
 
-  
+  Otávio Dioscânio /2020
 
   
 
@@ -610,6 +608,8 @@ static void somaFlexivel (params int[] nomeArray) {
 
 - Obs.: ainda não sei os defaults de class, main, variáveis
 
+-  As classes e estruturas por padrão são `internal`, já os membros de classe/estrutura são privados por padrão.
+
 - `new`: vai alocar a memória para um objeto e retornar o endereço dela
 
 ```C#
@@ -700,7 +700,7 @@ Jogador j1 = new Jogador("Zenifreudo");	// ou zigofreudo
 ### Aula 30 - Sobrecarga de construtores
 
 - Permite mais um construtor para a classe.
-- Vários construtores de mesmo nome, mas o conjunto de parâmetros é diferente.
+- Vários construtores de mesmo nome, <u>mas o conjunto de parâmetros é diferente</u>.
 - Obs.: sobrecarga de métodos é mesma coisa
 
 ```c#
@@ -1045,7 +1045,7 @@ Console.WriteLine("Peso: " + bicho.pes); // usa o get
 
 ### Aula 42 - Indexadores de Classes
 
-- Membro de uma classe que <u>permite que os objetos</u> dela possam ser indexados como arrays.
+- Membro de uma classe que <u>permite que os objetos</u> dela possam ser indexados como **arrays**.
 - Aplicação (ex.): valores diferentes em situações diferentes
 - Obs.: `this` é o que indexa
 - Dúvidas: 1) onde está a referência no cabeçalho do indexador de que é o peso a ser indexado e acessado pelos objetos? 2) só pode um indexador por classe? poderia ter bicho.peso[1] e bicho.altura[2]?
@@ -1131,5 +1131,106 @@ Carro c2 = new Carro("Nissan ", "Versa rebaixado ", "Azul ");
 
 ---
 
-### Aula 45 - Array de estruturas
+### Aula 45 - Array de Struct
 
+- Quando quer criar vários objetos de um mesmo tipo (Struct é um tipo)
+- Isso não serve para classes.
+
+```c#
+Carro [] concessionaria = new Carro[4];
+concessionaria[0].marca = "HRV";
+concessionaria[0].cor = "Prata";
+```
+
+---
+
+### Aula 46 - Métodos que retornam objetos
+
+**voltar nessa aula, entendi pouca coisa** :cry:	
+
+```c#
+	return new Ovo(numOvo, nomeGalinha); // chama o construtor
+```
+
+---
+
+### Aula 47 - Sobrecarga de métodos
+
+- Os métodos devem ter parâmetros diferentes (em número ou tipo).
+- Funções de mesmo nome que fazem coisas diversas.
+
+```c#
+public double soma(params double[]n) {
+		double soma = 0;
+		foreach (double i in n) {
+			soma += i;
+		}
+		return soma
+}
+
+public int soma(params int[]n) {
+		int soma = 0;
+		for (int i = 0; i < n.Length; i++) {
+			soma += n[i];
+		}
+		return soma;
+}
+```
+
+---
+
+### Aula 48 - Recursividade
+
+- Função recursiva: que chama ela mesma. Precisa-se de uma condição de parada.
+- Fatorial e somatório: exemplos clássicos
+- Substitui estruturas de repetição.
+
+```c#
+public int fat(int n) {
+	int res;
+	if (n <= 1) {
+		res = 1;  // controle de parada
+	} else {
+		res = n * fat(n - 1); // modificação de n
+	}
+	return res;
+}
+```
+
+---
+
+### Aula 49 - Métodos e Variáveis Estáticos (static)
+
+- Não estão necessariamente em uma classe static
+- Acessar os métodos da classe **sem precisar declarar um objeto**.
+- Podem ser chamado de qualquer lugar (se forem públicos)
+
+```c#
+class Mat {
+
+	public static double pi = 3.14;
+
+	public static int dobro (int n) {
+		return n * 2;
+	}
+}
+class Aula49 {
+	static void Main() {
+		double vPi = Mat.pi;	// propriedade
+        int vinte = Mat.dobro(10); // função
+    }
+}
+
+```
+
+---
+
+### Aula 50 - Delegates
+
+- É um objeto que faz referência a um método
+
+- Ex.: uma classe com vários métodos `static` e um `delegate` que faz referência a esses métodos. 
+
+- `delegate` possui o endereço de entrada do método, não a rotina inteira
+
+  // parei no minuto 5
