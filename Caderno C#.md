@@ -1227,10 +1227,142 @@ class Aula49 {
 
 ### Aula 50 - Delegates
 
-- É um objeto que faz referência a um método
-
-- Ex.: uma classe com vários métodos `static` e um `delegate` que faz referência a esses métodos. 
-
+- É um *objeto* que faz referência a métodos
+- Ex.: uma classe com vários métodos `static` e um `delegate` que faz referência a eles. 
 - `delegate` possui o endereço de entrada do método, não a rotina inteira
+- desafio: fazer o mesmo programa com params
 
-  // parei no minuto 5
+```c#
+using System;
+
+delegate int Op(int num1, int num2);
+
+class Matematica {
+
+	public static int soma(int n1, int n2) {
+		return n1 + n2;
+	}
+
+	public int multi(int n1, int n2) {
+		return n1 * n2;
+	}
+}
+```
+
+```c#
+class Aula50 {
+	static void Main() {
+		int res;
+		Op d1 = new Op(Matematica.soma);
+		res = d1(3, 4);       
+    }
+}
+```
+
+- O que eu entendi: cria-se um objeto da "classe" delegate; ele recebe o método pelo parâmetro do construtor, comportando-se como o próprio método. (não entendi a utilidade).
+
+---
+
+### Aula 51 - Argumentos de entrada do programa
+
+- Usa-se um array, que pode ter qualquer nome;
+
+```c#
+static void Main(string[] args) { // array
+	if (args.Length > 0) {
+			Console.WriteLine("Quantidade de argumentos: " + args.Length);
+		// ...
+```
+
+- Passando os parâmetros na hora de executar:
+
+> .\Aula051-ArgumentosEntrada oi ola sim verdade
+>
+> Quantidade de argumentos: 4
+> oi na posição 0
+> ola na posição 1
+>
+> //...
+
+- Pergunta: tem que ser string? tem que ser vetor?
+  - Consegui compilar com int e double, mas deu um warning. Só foi possível passar número inteiro como argumento (nesses dois casos).
+  - tem que ser vetor, tentei Main(string a, string b) e deu erro.
+
+---
+
+### Aula 52 - Exceções (parte 1) - Try Catch 
+
+- Exceções = erros
+
+- Toda exceção é representada por uma classe que herda da classe `Exception`
+- Em uma zona crítica, é possível definir o caminho caso dê erro (tratamento de erro)
+
+> Exceção Sem Tratamento: System.DivideByZeroException: Tentativa de divisão por zero.
+>    em Aula52.Main()
+
+- Quando dá problema: executa o que está no `catch` **e continua a execução normal do programa**.
+  - A continuação se dá **a partir do `catch`**. Atenção: se ocorrer um erro na primeira linha do `try`, as demais linhas dele não serão executadas, pois o desvio é imediato.
+
+```c#
+n1 = 10;
+n2 = 0;
+		
+try {
+	res = n1 / n2;
+    Console.WriteLine("Não deu erro na linha anterior. Ufa!");
+} catch {
+	Console.WriteLine("ERRO!");
+}
+```
+
+> ERRO!
+> 10 / 0 = 0
+
+- Gerar mensagem:
+  - Recebe objeto da classe `Exception`
+
+```c#
+/...
+} catch (Exception e) { // ou mais específico: DivideByZeroException e
+	Console.WriteLine("ERRO! " + e.Message);
+    Console.WriteLine(e);
+    Console.Writeline(e.GetType)
+}
+```
+
+---
+
+### Aula 53 - Tratamento de Erros (parte 2) - Try Catch Finally
+
+- bloco `finally`: é executado independentemente do disparo da exceção
+
+```c#
+try {
+	// executado até a linha do erro
+} catch {
+	// só quando dá erro
+} finally {
+	// executado sempre
+}
+```
+
+- E se eu quiser fazer minha própria exceção? Dá para forçar/criar um erro:
+
+`throw new Exception(string message);`
+
+```c#
+try {
+	res = n1 / n2; // aqui não deu erro
+	Console.WriteLine("{0} / {1} = {2}", n1, n2, res);
+    
+	throw new Exception ("Encontrei um erro!"); // entra no e.Message 
+
+} catch (Exception e) {	
+//...
+```
+
+- Veja no código da aula a mensagem criada em um método  de uma classe.
+
+---
+
+### Aula 54 - Namespaces
