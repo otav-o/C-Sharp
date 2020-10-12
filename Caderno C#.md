@@ -1366,3 +1366,146 @@ try {
 ---
 
 ### Aula 54 - Namespaces
+
+- Controle de escopo.
+- Pode-se classificar os elementos dentro do Namespace. Agrupamento de classes por tipo.
+- É possível ter duas classes ou funções de mesmo nome mas em namespaces diferentes.
+  - o local/escopo é diferente
+  - Na hora de chamar deve-se indicar o namespace
+
+```c#
+namespace Calc1 {
+	class Area{
+	}
+}
+namespace Calc2 {
+	class Area {
+	}
+}
+class Aula54 {
+	static void Main() {
+		area = Calc1.Area.Quad(0, 5F); // teve que indicar o namespace
+	}
+}
+```
+
+---
+
+### Aula 55 - Coleção Dictionary
+
+- Coleção de dados que são relacionados pelas chaves
+- Quantidade de itens específica/genérica
+
+- Tem que importar a biblioteca `System.Collections.Generic`
+
+```c#
+using System;
+using System.Collections.Generic;
+```
+- Construtor genérico:
+
+```c#
+Dictionary <tipoChave, tipoDado> nome = new Dictionary <tipoChave, tipoDado> ();
+Dictionary <int, string> veiculos = new Dictionary <int, string> ();
+```
+
+- Adicionar elementos
+
+```c#
+nomeDicionario.Add(chave, valor);
+veiculos.Add(5, "Aviao");
+```
+
+- Propriedade count (não é método)
+
+```c#
+veiculos.Count; // tipo int
+```
+
+- Método clear
+
+```c#
+veiculos.Clear(); // limpa tudo
+```
+
+- Verificar se determinada chave ("posição") está preenchida: `dictionary.ContainsKey(key)`
+  - Lembrar que o preenchimento do dicionário não precisa ser sequencial. Usar as chaves 10, 32 e 150 não vincula os valores ignorados. Lembrar que é um índice, não precisa ser numérico, isso aqui não é array.
+
+```c#
+if (veiculos.ContainsKey(20)){ // retorna booleano (e não o valor)
+```
+
+- Se existe um valor na coleção: `dictionary.ContainsValue(value)`
+
+```c#
+if (veiculos.ContainsValue("Navio")) { // retorna booleano (e não a chave)
+```
+
+- Remover um valor específico: método `dictionary.remove(chave)`
+
+```c#
+veiculos.Remove(20);
+```
+
+- Propriedades Keys e Values retornam coleções com chaves e valores, respectivamente. Precisa de um elemento Keycollection
+- Substituir um valor (também me parece um substituto de dicionario.Add(chave, valor);
+
+```c#
+dicionario[chave] = valor;
+veiculos[15] = "Bicicleta";
+```
+
+- For ou foreach para imprimir todos os elementos de uma coleção
+
+```c#
+foreach (string v in veiculos) { // não rola pois string não é o tipo da coleção
+	Console.WriteLine(v);
+}
+
+foreach (KeyValuePair<int, string> v in veiculos) {
+    Console.WriteLine(v.Value);	// ainda precisa indicar se quer a chave ou o valor.
+}
+
+foreach (string v in veiculos.Values) { // o mais fácil
+    Console.WriteLine(v);
+}
+```
+
+- Outra forma de imprimir
+  - Todos os elementos estão no valores, que é do tipo ValueCollection
+
+```c#
+Dictionary <int, String>.ValueCollection valores = veiculos.Values;
+
+foreach string v in valores {
+    Console.WriteLine(v);
+}
+```
+
+- Observação: às vezes usa-se Key/Value no plural, às vezes no singular. Observe o contexto: refere-se a somente um valor específico ou a todos do dicionário?
+
+---
+
+### Aula 56 - Coleção LinkedList = Lista duplamente encadeada
+
+- Cada elemento é um nó da lista, que tem os links para os elementos posterior e anterior
+- Lembrar do `using System.Collections.Generic;`
+
+```c#
+LinkedList<tipoLista> nomeLista = new LinkedList<tipoLista>();
+LinkedList<string> transporte = new LinkedList<string>();
+```
+
+- lista.AddFirst(valor);
+  - Adiciona o valor no início. Ou seja, o último a ser adicionado é o primeiro a ser impresso.
+- lista.AddLast(valor);
+  - Adiciona no final;
+
+```c#
+transporte.AddFirst("Carro");
+transporte.AddFirst("Aviao");
+```
+
+- lista.AddAfter
+
+  parei no minuto 5
