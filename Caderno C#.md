@@ -1489,23 +1489,258 @@ foreach string v in valores {
 ### Aula 56 - Coleção LinkedList = Lista duplamente encadeada
 
 - Cada elemento é um nó da lista, que tem os links para os elementos posterior e anterior
+- Vou chamar de lista2 para não confundir com List (próxima aula)
 - Lembrar do `using System.Collections.Generic;`
 
 ```c#
-LinkedList<tipoLista> nomeLista = new LinkedList<tipoLista>();
+LinkedList<tipoLista2> nomeLista2 = new LinkedList<tipoLista>();
 LinkedList<string> transporte = new LinkedList<string>();
 ```
 
-- lista.AddFirst(valor);
+- **`lista2.AddFirst(valor);`**
   - Adiciona o valor no início. Ou seja, o último a ser adicionado é o primeiro a ser impresso.
-- lista.AddLast(valor);
+- **`lista2.AddLast(valor);`**
   - Adiciona no final;
 
 ```c#
 transporte.AddFirst("Carro");
-transporte.AddFirst("Aviao");
+transporte.AddLast("Aviao");
 ```
 
-- lista.AddAfter
+06:50 12/10/2020
 
-  parei no minuto 5
+- **`lista2.AddAfter(node, value), lista.AddBefore(node, value);`**
+
+```c#
+LinkedListNode<string> no;
+no = transporte.FindLast("Navio"); // .FindLast(valor) renorna um nó de lista encadeada
+transporte.AddAfter(no, "Charrete");
+transporte.AddBefore(no, "Patinete");
+```
+
+- **`node.Next; node.Previous; node.Value`**
+
+```c#
+no = transporte.FindLast("Motocicleta").Next; // no = valor seguinte à motocicleta
+
+Console.WriteLine(no.Value);
+Console.WriteLine(no.Previous.Value); // "Motocicleta"
+```
+
+- **`lista2.Remove(value), RemoveFirst(), RemoveLast(), Clear()`**
+
+```c#
+lista2.Remove(valor); // valor específico
+
+lista2.RemoveFirst(); // primeiro
+lista2.RemoveLast(); // último
+
+lista2.Clear(); // apaga tudo
+```
+
+- Imprimir os elementos (mais fácil que dicionário)
+
+```c#
+foreach (string v in transporte) {
+	Console.WriteLine(v);
+}
+```
+
+- **`lista2.Find(value)`**
+  - <u>Retorna a referência se existir ou **`null`** se não existir;</u> 
+
+```c#
+if (transporte.Find("Carro") == null) {
+	Console.WriteLine("Não encontrado");
+} else {	
+	Console.WriteLine("Elemento encontrado");
+}
+```
+
+---
+
+### Aula 57 - Coleção List (Parte 1)
+
+- Eu chamei o LinkedList anterior de lista, mas entenda que ele é diferente de List
+- Usada para substituir o array tradicinal. Mais versátil, mais fácil de trabalhar. Possui vários métodos. "Array tunado"
+- Não esquecer do `using System.Collections.Generic;`
+
+```c#
+List<string>carros = new List<string>();	
+```
+
+- **`lista.Add(valor)`**
+  - testar se o add funciona com LinkedList
+
+```c#
+veiculos.Add("HRV");
+```
+
+- **`lista_recebe.AddRange(lista_envia);`**
+
+```c#
+veiculos.AddRange(carros); // copia todos os elementos da lista carros para veiculos
+```
+
+- **`lista.Clear();`**
+- **`lista.Contains(valor)`**; 
+  - retorna true ou false
+
+```c#
+if (carros.Contains(valor)) {
+```
+
+- **`lista_envia.CopyTo(array_destino, pos_array_destino);`**
+  - O destino não pode ser outra lista (pelo menos foi o que eu percebi), e sim um array.
+  - CopyTo copia todos os elementos da lista para o array, a partir da posição indicada deste.
+
+```c#
+string [] carros2 = new string[10];
+carros.CopyTo(carros2, 2); // pos 0 e 1 ficarão com seus valores de antes
+```
+
+- **`lista.IndexOf(valor);`**
+  - retorna a posição da primeira ocorrência ou **-1** (se não encontrar)
+
+```c#
+Console.WriteLine("Está na posição " + carros.IndexOf(valor));
+```
+
+- Impressão dos itens é igual `LinkedList`
+
+```c#
+foreach (string x in carros) {
+	Console.WriteLine(x);
+}
+```
+
+---
+
+### Aula 58 - List (Parte 2)
+
+- **`lista.Insert(pos, valor);`**
+
+```c#
+carros.Insert(1, "Cruze");
+```
+
+- **`lista.LastIndexOf(valor);`**
+
+```c#
+carros.Add("HRV");
+int ultimo = carros.LastIndexOf("HRV");
+```
+
+- **`lista.Remove(valor);`** e **`lista.RemoveAt(posicao);`**
+
+```c#
+carros.Remove("Argo");
+carros.RemoveAt(0);
+```
+
+- **`lista.Reverse();`**
+
+```
+carros.Reverse(); // simplesmente inverte
+```
+
+- **`lista.Sort();`**
+  - Ordem alfabética ou numérica
+
+```c#
+carros.Sort();
+```
+
+- **`lista.Count;`** // se não tiver elementos, o resultado é zero
+
+```c#
+int tamanho = carros.Count // propriedade. É tipo um length
+```
+
+- **`lista.Capacity;`**
+  - Quantos elementos cabem na lista. Dá para alterar
+  - É uma propriedade também
+  - Diminuir a capacidade para um número menor do que Count dá erro
+
+```c#
+int cap = carros.Capacity;
+carros.Capacity = 15;
+```
+
+---
+
+### Aula 59 - Coleção Queue (Fila)
+
+- Última aula no modo console, na próxima teremos VS 2019 com janela gráfica :tada:
+- Particularidade: o primeiro a ser adicionado é o primeiro a sair. First In, First Out.
+- Só dá para visualizar o elemento que está na frente (em primeiro), não é possível manipular os demais
+
+```c#
+Queue<string>veiculos = new Queue<string>();
+```
+
+- Dá para inicializar passando uma coleção para o construtor (tem que testar se isso funciona para as outras coleções)
+
+```c#
+string[] vs = {"Carro", "Moto", "Navio", "Aviao"};
+Queue<string> veiculos = new Queue<string>(vs);
+```
+
+- **`fila.Enqueue(valor);`** 	// adicionar elementos no **final da fila**
+
+```c#
+veiculos.Enqueue("Jegue");
+```
+
+- **`fila.Count;`**  // quantos espaços estão preenchidos
+
+- **`fila.Contains(valor);`**  // retorna true ou false
+
+  ```c#
+  if (comidas.Contains("Bolo")) {
+  ```
+
+- **`fila.Clear();`**
+
+- **`fila.Dequeue();`**  // retornar e remover elementos do **início da fila**
+
+  - Retorna o primeiro elemento da fila e o remove dela
+
+```c#
+Console.WriteLine("Primeiro veículo: " + veiculos.Dequeue()); // 
+Console.WriteLine(veiculos.Count); // terá um elemento a menos
+```
+
+- **`fila.Peek()`**;  // apenas retornar o **primeiro**
+  - Retorna o primeiro elemento mas **não remove**.
+
+```c#
+Console.WriteLine("Primeiro: " + veiculos.Peek());
+```
+- Imprimir todos os elementos
+  - pode fazer com foreach + peek/dequeue ou um foreach normal (abaixo)
+```c#
+foreach (string z in veiculos) {
+	Console.WriteLine(z);
+}
+```
+
+- Mas atenção: Queue não trabalha com indexadores. <u>Não existe</u>: `int c = veiculos[3]`
+  - Só consegue acessar o primeiro elemento da fila.
+
+```c#
+while (veiculos.Count > 0) {
+	Console.WriteLine(veiculos.Dequeue);
+}
+Console.WriteLine(veiculos.Count); // 0
+```
+
+- Ex. de uso: um jogo de cartas em que se retira cartas de um monte.
+
+### Aula 60 - Janelas no padrão Windows
+
+12/10/2020, segunda
+
+- Baixar: Visual Studio Community. Na página de configuração, deixar marcado "Desenvolvimento para Desktop com .NET"
+- Criar projeto: Aplicativo do Windows Forms
+
