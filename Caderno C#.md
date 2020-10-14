@@ -1737,10 +1737,16 @@ Console.WriteLine(veiculos.Count); // 0
 
 - Ex. de uso: um jogo de cartas em que se retira cartas de um monte.
 
-### Aula 60 - Janelas no padrão Windows
+---
+
+### Até mais ✔
+
+- **Termina aqui o modo console**
+- Estes foram os pontos principais da linguagem C#. Não é tudo que o que a linguagem faz, faltou muita coisa!
+
+<!-- Próximo caderno: [formulários (janelas) Windows](Caderno C# [parte 2].md).-->
 
 12/10/2020, segunda
 
-- Baixar: Visual Studio Community. Na página de configuração, deixar marcado "Desenvolvimento para Desktop com .NET"
-- Criar projeto: Aplicativo do Windows Forms
+
 

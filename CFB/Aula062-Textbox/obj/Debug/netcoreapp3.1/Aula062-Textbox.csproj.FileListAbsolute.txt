@@ -1,0 +1,15 @@
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\bin\Debug\netcoreapp3.1\Aula062-Textbox.exe
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\bin\Debug\netcoreapp3.1\Aula062-Textbox.deps.json
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\bin\Debug\netcoreapp3.1\Aula062-Textbox.runtimeconfig.json
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\bin\Debug\netcoreapp3.1\Aula062-Textbox.runtimeconfig.dev.json
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\bin\Debug\netcoreapp3.1\Aula062-Textbox.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\bin\Debug\netcoreapp3.1\Aula062-Textbox.pdb
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062-Textbox.csprojAssemblyReference.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062-Textbox.csproj.GenerateResource.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062-Textbox.AssemblyInfoInputs.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062-Textbox.AssemblyInfo.cs
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062-Textbox.csproj.CoreCompileInputs.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062-Textbox.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062-Textbox.pdb
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062-Textbox.genruntimeconfig.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062_Textbox.f_Principal.resources

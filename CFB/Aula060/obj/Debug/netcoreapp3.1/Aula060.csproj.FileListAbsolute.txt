@@ -1,0 +1,15 @@
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\bin\Debug\netcoreapp3.1\Aula060.exe
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\bin\Debug\netcoreapp3.1\Aula060.deps.json
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\bin\Debug\netcoreapp3.1\Aula060.runtimeconfig.json
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\bin\Debug\netcoreapp3.1\Aula060.runtimeconfig.dev.json
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\bin\Debug\netcoreapp3.1\Aula060.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\bin\Debug\netcoreapp3.1\Aula060.pdb
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\obj\Debug\netcoreapp3.1\Aula060.csprojAssemblyReference.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\obj\Debug\netcoreapp3.1\Aula060.csproj.GenerateResource.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\obj\Debug\netcoreapp3.1\Aula060.AssemblyInfoInputs.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\obj\Debug\netcoreapp3.1\Aula060.AssemblyInfo.cs
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\obj\Debug\netcoreapp3.1\Aula060.csproj.CoreCompileInputs.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\obj\Debug\netcoreapp3.1\Aula060.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\obj\Debug\netcoreapp3.1\Aula060.pdb
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\obj\Debug\netcoreapp3.1\Aula060.genruntimeconfig.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula060\obj\Debug\netcoreapp3.1\Aula060.Principal.resources
