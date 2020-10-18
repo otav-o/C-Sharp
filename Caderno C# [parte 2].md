@@ -22,8 +22,8 @@ tudo é muito bonito
 
 ### Aula 61 - Formulário, manipulação de componentes, evento de clique
 
-- Ver o código: `F7`
-- Bibliotecas importadas cinza: ainda não estão sendo utilizadas.
+- Ver o código: `F7`, ver designer `shift`+ `f7`
+-  Bibliotecas importadas cinza: ainda não estão sendo utilizadas.
 - Codificar depois de definir os names em propriedades -> design
 
 ```c#
@@ -94,3 +94,70 @@ namespace Aula062_Textbox
 ```
 
 - Desafio aula 62: deixar o que for inserido em uma coleção list
+
+---
+
+### Aula 63 - Chamar um novo formulário
+
+- Como abrir uma nova janela
+
+```c#
+ private void bt_mostrar_Click(object sender, EventArgs e)
+        {
+            f_Secundario veiculos = new f_Secundario(tb_veiculos.Text); // chamando outro formulário
+            // veiculos.Show(); permite clicar na janela debaixo
+            veiculos.ShowDialog(); // não deixa, nem se minimizar
+        }
+```
+
+- No construtor do outro formulário
+
+```c#
+public f_Secundario(String v)
+        {
+            InitializeComponent();
+            tb_veiculos.Text = v;
+        }
+```
+
+---
+
+### Aula 64 - Enviar dados de um formulário para outro
+
+- Atribuir um valor a um form pai a partir do form filho.
+- Aula passada foi o inverso: passou do pai para o filho por um construtor
+
+```c#
+ public partial class f_Secundario : Form
+    {
+        f_Principal fp; // criado para poder usar f fora do construtor
+
+        public f_Secundario(String v, f_Principal f)
+        {
+            InitializeComponent();
+
+            tb_veiculos.Text = v;
+
+            fp = f;
+
+            f.num = 10; // importante: variável public. fp é o objeto da classe f_Principal?
+
+        }
+```
+
+```c#
+private void f_Secundario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            fp.tb_veiculos.Text = this.tb_veiculos.Text;  
+    
+    // tem que ir em design -> modificador -> public (por padrão é private)
+        }
+```
+
+---
+
+### Aula 65 - Como criar um menu
+
+parei em 3:40
+
+- Componente MenuStrip

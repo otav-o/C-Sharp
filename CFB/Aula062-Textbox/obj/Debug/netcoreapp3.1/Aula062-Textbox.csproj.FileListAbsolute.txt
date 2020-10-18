@@ -13,3 +13,5 @@ C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\o
 C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062-Textbox.pdb
 C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062-Textbox.genruntimeconfig.cache
 C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062_Textbox.f_Principal.resources
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062_Textbox.f_Secundario.resources
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\CFB\Aula062-Textbox\obj\Debug\netcoreapp3.1\Aula062_Textbox.f_checkBox.resources
