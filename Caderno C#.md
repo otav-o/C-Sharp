@@ -715,7 +715,7 @@ Jogador j3 = new Jogador ("Théo", 50);
 
 ---
 
-### Aula 31 - Classes static
+### Aula 31 - Classes Estáticas
 
 - <u>Não se pode instanciar a partir de uma classe declarada como static.</u>
 - Logo, <u>classes static não permitem o uso de construtores</u>. O objeto static utiliza uma posição fixa na memória, não se usa `new`.
