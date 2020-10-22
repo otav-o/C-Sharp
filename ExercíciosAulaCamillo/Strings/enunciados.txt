@@ -1,0 +1,84 @@
+-> Atenção: não perder tempo enfeitando demais o programa. Depois vou refazer tudo usando POO
+
+1) Fazer um programa para contar o número de espaços em
+branco de uma string.
+
+2) Refaça o programa anterior criando uma função que
+receberá como parâmetro a string e retornará o número de
+espaços em branco que a string contém.
+
+3) Fazer um programa para contar o número de vogais em
+uma string.
+
+4) Refaça o programa anterior criando uma função que
+receberá como parâmetro a string e retornará o número de
+vogais que a string contem.
+Exercícios
+
+39
+
+5) Escreva um programa para ler uma string (com mais de
+uma palavra) e imprimi-la de forma que a primeira letra de
+cada palavra fique em maiúscula. Para isso, basta subtrair
+32 do elemento que deseja alterar para maiúsculo.
+Console.Write("{0} ", Convert.ToChar(chrNomeRecebido[i] – 32));
+ou
+Console.Write("{0} ", Convert.ToChar(chrNomeRecebido[i] – 'a' + 'A' ));
+Exemplo:
+Entrada: lab. de linguagem de programacao
+Impressão: Lab. De Linguagem De Programacao
+
+Exercícios
+
+40
+6) Crie um procedimento que receba uma frase e a exiba na
+tela de forma soletrada, ou seja, cada letra deve ser
+exibida na tela separada por hífen.
+
+7) Crie um procedimento que receba uma string e imprima a
+string invertida.
+Exemplo:
+Entrada: Teste
+Saída: etseT
+
+
+8) Faça um programa que leia duas strings e crie uma
+terceira string que será a concatenação das duas outras
+strings lidas.
+9) Fazer um procedimento para imprimir uma string recebida
+como parâmetro sem os espaços em branco.
+10) Fazer um procedimento para receber uma string do
+usuário e imprimir uma estatística dos caracteres
+digitados. Isto é, imprimir o número de vogais, consoantes
+e outros caracteres.
+11) Fazer um programa para ler uma string e transferir as
+consoantes para uma string e as vogais para outra. Depois
+mostre cada uma das strings.
+Exercícios
+
+47
+12) Faça uma função que receba uma string do usuário (máx.
+20 caracteres) e um caractere qualquer. A função deverá
+criar uma nova string onde terão sido removidas todas as
+ocorrências do caractere da string. A função deve retornar
+o número de remoções.
+
+13) Escreva uma função que receba uma cadeia de caracteres
+de tamanho máximo 100, e retorne true se esta cadeia é
+uma palíndrome e false caso contrário. Uma palavra é dita
+ser palíndrome se a sequência de seus caracteres da
+esquerda para a direita é igual à seqüência de seus
+caracteres da direita para a esquerda. Ex.: arara, asa.
+Exercícios
+
+48
+14) Um dos sistemas de encriptação mais antigos é atribuído
+a Júlio César: se uma letra a ser encriptada é a letra de
+número N do alfabeto, substitua-a com a letra (N+K), onde
+K é um número inteiro constante (César utilizava K = 3).
+
+Dessa forma, para K = 1 a mensagem “Ataque ao
+amanhecer” se torna “bubrfabpabnboifdfs”. Faça um
+programa que receba como entrada uma mensagem e um
+valor de K e retorne a mensagem criptografada pelo
+código de César.
