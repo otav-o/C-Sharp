@@ -17,7 +17,7 @@ class Ex03 {
                 case 'e': soma++; break;
                 case 'i': soma++; break;
                 case 'o': soma++; break;
-                case 'u': soma++; break; // não precisava ter colocado um por linha kkk burro
+                case 'u': soma++; break; // não precisava ter colocado um por linha kkk burro - veja na questão seguinte
                 default: break;
             }
         }
