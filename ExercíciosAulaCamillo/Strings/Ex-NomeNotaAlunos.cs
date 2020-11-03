@@ -40,4 +40,4 @@ class Camillo {
             }
         }
     }
-} // feito. Mas tá uma zona, muito mal escrito. vou refazer com funções (e depois classes, quando aprender.)
+} // feito. Mas tá uma zona, muito mal escrito. Seria bom refazer com funções (e depois classes, quando aprender.)
