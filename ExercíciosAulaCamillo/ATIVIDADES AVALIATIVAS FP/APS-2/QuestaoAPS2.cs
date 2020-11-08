@@ -3,6 +3,33 @@
 using System;
 
 class APS2 {
+    static void Main() {
+        char [,] jogo = new char[3,3]; // cria a matriz de 9 casas
+        int linha, coluna, jo = 0; // jo define se é jogador 1 ou 2
+        char resp = ' ';    // inicialização somente
+        for (int i = 1; i < 10; i++) {
+            if (i % 2 != 0) { // jogador 1: contador ímpar.
+                jo = 1;
+                resp = 'x';
+            } else {
+                jo = 2;
+                resp = 'o';
+            }
+
+            Console.WriteLine("--- Vez do jogador {0} ({2}) ----\n{1}° lance", jo, i, resp);
+            Console.Write(" Digite a linha: ");
+            linha = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write(" Digite a coluna: ");
+            coluna = Convert.ToInt32(Console.ReadLine());
+
+            if (!jogar(jogo, linha, coluna, resp)) i--; // se jogar retornar falso, é porque a casa já está ocupada
+            else if (checarVitoria(jogo)) break; // se houver vitória, acaba o jogo
+            
+        }
+        
+    }
+
     static bool jogar(char[,] jogo, int linha, int coluna, char jog) {
         if (jogo[linha, coluna] != 'x' && jogo[linha, coluna] != 'o') {
             jogo[linha, coluna] = jog;
@@ -27,79 +54,16 @@ class APS2 {
 
     }
 
-
-
     static bool checarVitoria(char[,] jogo) {
         if (checarLinhaEColuna(jogo) == 1) {
-            Console.Write("FIM DE JOGO. Jogador 1 (X) ganhou!");
+            Console.Write("FIM DE JOGO. Jogador 1 ganhou!");
             return true;
         } else if (checarLinhaEColuna(jogo) == 2) {
-            Console.Write("FIM DE JOGO. Jogador 2 (O) ganhou!");
+            Console.Write("FIM DE JOGO. Jogador 2 ganhou!");
             return true;
         } else {
             return false;
         }
-    }
-
-
-    static int checarColuna(char[,] jogo) {
-        int cont = 0;
-        for (int i = 0; i < jogo.GetLength(0); i++) {
-            for (int j = 0; j < jogo.GetLength(1); j++) {
-                if (jogo[j, i] == 'x') 
-                    cont++; 
-                else if (jogo[j, i] == 'o')
-                    cont--;
-                if (cont == 3) return 1;
-                else if (cont == -3) return 2;
-            }
-            cont = 0;
-        }
-        return 0; // acho que se eu estivesse em um dia melhor daria para unificar as funções checarColuna() e checarLinha()
-    }
-
-    static int checarLinha(char[,] jogo) {
-        int cont = 0;
-        for (int i = 0; i < jogo.GetLength(0); i++) {
-            for (int j = 0; j < jogo.GetLength(1); j++) {
-                if (jogo[i, j] == 'x') 
-                    cont++; 
-                else if (jogo[i, j] == 'o')
-                    cont--;
-                if (cont == 3) return 1;
-                else if (cont == -3) return 2;
-            }
-            cont = 0;
-        }
-        return 0;
-    }
-
-    static void Main() {
-        char [,] jogo = new char[3,3];
-        int linha, coluna, jo = 0;
-        char resp = ' ';
-        for (int i = 1; i < 10; i++) {
-
-            if (i % 2 != 0) {
-                jo = 1;
-                resp = 'x';
-            } else {
-                jo = 2;
-                resp = 'o';
-            }
-
-            Console.WriteLine("--- Vez do jogador {0} ({2}) ----\n{1}° lance", jo, i, resp);
-            Console.Write(" Digite a linha: ");
-            linha = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write(" Digite a coluna: ");
-            coluna = Convert.ToInt32(Console.ReadLine());
-
-            if (!jogar(jogo, linha, coluna, resp)) i--;
-            else if (checarVitoria(jogo)) break; 
-            
-        }
-        
     }
 
     static int checarLinhaEColuna(char[,] jogo) {
@@ -125,5 +89,5 @@ class APS2 {
 
         return 0;
     }
-
+    
 }
