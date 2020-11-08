@@ -27,14 +27,14 @@ class APS2 {
             else if (checarVitoria(jogo)) break; // se houver vitória, acaba o jogo
             
         }
-        
+        if (!checarVitoria(jogo)) Console.Write("Deu velha!"); // para não complicar eu deixei repetir o texto de vitória
+        Console.ReadLine();
     }
 
     static bool jogar(char[,] jogo, int linha, int coluna, char jog) {
         if (jogo[linha, coluna] != 'x' && jogo[linha, coluna] != 'o') {
             jogo[linha, coluna] = jog;
             imprimirJogo(jogo);
-            checarVitoria(jogo);
             return true;
         } else {
             Console.WriteLine("Erro. Já jogaram aí. Tente de novo.");
@@ -44,6 +44,7 @@ class APS2 {
     }
 
     static void imprimirJogo(char[,] jogo) {
+        Console.Clear();
         for (int i = 0; i < jogo.GetLength(0); i++) {
             for (int j = 0; j < jogo.GetLength(1); j++) {
                 Console.Write(" | ");
@@ -55,10 +56,10 @@ class APS2 {
     }
 
     static bool checarVitoria(char[,] jogo) {
-        if (checarLinhaEColuna(jogo) == 1) {
+        if (checarLinhaEColuna(jogo) == 1 || checarDiagonais(jogo) == 1) {
             Console.Write("FIM DE JOGO. Jogador 1 ganhou!");
             return true;
-        } else if (checarLinhaEColuna(jogo) == 2) {
+        } else if (checarLinhaEColuna(jogo) == 2 || checarDiagonais(jogo) == 2) {
             Console.Write("FIM DE JOGO. Jogador 2 ganhou!");
             return true;
         } else {
@@ -90,4 +91,20 @@ class APS2 {
         return 0;
     }
     
+    static int checarDiagonais(char[,] jogo) { // supondo uma matriz quadrada
+        int d1 = 0, d2 = 0;
+        for (int i = 0; i < jogo.GetLength(0); i++) {
+
+            if (jogo[i,i] == 'x') d1++; // diagonal principal
+            else if(jogo[i,i] == 'o') d1--;
+
+            if (jogo[i, jogo.GetLength(0)-1-i] == 'x') d2++; // diagonal secundária
+            else if(jogo[i, jogo.GetLength(0)-1-i] == 'o') d2--;
+
+            if (d1 == 3 || d2 == 3) return 1;
+            else if (d1 == -3 || d2 == -3) return 2;
+        }
+        return 0;
+    }
 }
+/*Obs.: considerei que o usuário vai sempre digitar um índice existente na matriz*/
