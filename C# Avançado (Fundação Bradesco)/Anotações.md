@@ -132,3 +132,64 @@ where "condição";
 
 # Capítulo 3 - Construção de Sistemas
 
+### ADO .NET
+
+- Tecnologia de acesso a banco de dados da plataforma .NET que permite a manipulação de dados
+- Componentes:
+  - Connection - realiza a conexão com o BD
+  - Command - executa comando no banco de dados
+  - DataAdapter - preenche o DataSet
+  - DataSet e DataReader - armazenam informações do banco de dados; conjunto de tabelas.
+
+### Data Set
+
+- É uma cópia do banco de dados.
+- Sua principal característica é funcionar em modo desconectado
+- Coleciona objetos Data Table
+- Intermediação com o banco de dados é feita por meio do Data Adapter
+
+### Data Adapter
+
+- Faz a ligação entre o Data Set e o banco de dados SQL Server, para atualizar o Data Set.
+- Métodos:
+  - FILL - preenche os DataSet com os dados do BD
+  - UPDATE - atualiza o BF com os dados do DataSet
+
+### SqlConnection
+
+- Responsável pela conexão com o banco de dados SQL Server.
+  - Mas precisa-se também da ConnectionString
+- ConnectionString - contém informações de acesso ao banco de dados
+
+```c#
+SqlConnection conexao;
+Conexao = new SqlConnection();
+Conexao.ConnectionString = "ConnectionString";
+```
+
+```c#
+SqlConnection conexao = new SqlConnecion (ConnectionString);
+
+conexao.Open();
+conexao.Close();
+```
+
+### SqlCommand
+
+- Responsável por executar um comando SQL.
+- Requer uma Query SQL e um objeto Connection
+
+```
+SqlCommand cmd = new SqlCommand("querySQL", conexao);
+```
+
+- Métodos:
+  - ExecuteReader - Retorna os dados da consulta (SqlDataReader). É usado com o comando SELECT
+  - ExecuteNonQuery - Não retorna dados. É usado com os comandos INSERT, UPDATE e DELETE.
+  - ExecuteScalar - Retorna um único valor após uma consulta
+
+### Namespaces/Provedores
+
+- SQL Server: `System.Data.SqlClient`
+- Oracle: `System.Data.OracleClient`
+- etc

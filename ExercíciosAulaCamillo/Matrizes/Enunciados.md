@@ -25,7 +25,10 @@ multiplique o vetor pela matriz. Imprima o resultado.
 6. Faça um programa que leia duas matrizes quadradas de
 dimensão 3. Crie um procedimento que multiplique as duas
 matrizes. Imprima o resultado.
-Exercícios
+
+- Atenção: multiplicar duas matrizes
+    - Precisam ter o mesmo tamanho (?) precisam ser quadradas (?)
+    - Multiplicar a primeira linha de uma pela primeira coluna da outra (pesquisar no google essa matéria)
 
 7. Faça um procedimento para calcular a multiplicação de
 uma matriz 3 x 4 por um escalar. Faça também um
