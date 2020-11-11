@@ -1,0 +1,126 @@
+1) Defina uma classe para representar as informações de um
+cartão de crédito. No método principal (Main) da classe
+Program, instancie dois objetos do tipo da classe criada,
+atribua valores a cada atributo dos objetos e imprima todos os
+atributos do segundo objeto instanciado.
+2) Defina uma classe para representar o peso e a altura de uma
+pessoa. Crie um programa que pergunte ao usuário o seu
+peso e a sua altura, atribuindo-os aos respectivos atributos de
+um objeto da classe criada. Imprima os atributos da classe
+criada.
+3) Considerando a classe do exercício (2) e a inicialização abaixo:
+
+joao.altura  1.90; joao.peso  98;
+maria.altura  1.50; maria.peso  55;
+- Escreva uma instrução que atribua 1.78 à altura de joao;
+- Escreva uma instrução que atribua 75 ao peso de maria.
+- Escreva um conjunto de instruções para imprimir a média
+das alturas e a média dos pesos de joao e maria.
+
+
+4) Faça um programa (método principal) para leitura, via teclado,
+dos dados de um contato de telefone. Os dados a serem
+guardados na classe Contato são os seguintes: nome,
+endereço (logradouro, número, complemento, bairro, cidade,
+UF), telefone e e-mail. Ao final, imprima estas informações na
+tela.
+
+5) Imagine que tenha sido realizada uma pesquisa com 6
+pessoas a respeito de salário e idade. Crie uma classe
+Pessoa e faça um programa que leia os dados coletados e
+forneça a média salarial e a média de idades dos
+entrevistados.
+
+class Aluno
+{
+
+public int matricula;
+public string nome;
+public double[]
+
+6) Crie uma classe chamada ponto contendo apenas as
+coordenadas x e y (inteiros) do ponto. Declare 2 pontos, leia
+as coordenadas x e y de cada um e calcule a distância entre
+eles. Apresente no final a distância entre os dois pontos.
+7) Utilizando a classe ponto definida no exercício anterior, faça
+um programa que leia 4 pontos. Em seguida imprima qual o
+ponto mais próximo do primeiro ponto lido.
+8) Faça um programa que receba três nomes de no máximo 100
+caracteres cada e as idades das respectivas pessoas em um
+vetor de objetos. Após o recebimento, listar os três nomes
+armazenados neste vetor por ordem crescente de idades.
+9) Faça um programa que armazene informações de
+restaurantes. Cada restaurante é identificado pelo nome,
+endereço, o tipo de comida (brasileira, chinesa, francesa,
+italiana, japonesa, etc.) e uma nota para a cozinha (entre 0 e
+5). O programa deverá ler todas as informações e imprimir ao
+final a lista de todos os restaurantes, e o endereço do
+restaurante com maior nota para a cozinha.
+
+10) Faça um programa que leia os dados de 10 ingressos. As informações
+que deverão ser lidas de cada ingresso são: preço, local e atração. Ao
+final, informe os eventos de ingresso mais barato e mais caros.
+11) Utilizando a classe definida no exercício anterior. Faça um
+procedimento que recebe um parâmetro do tipo ingresso e outro
+contendo um novo preço que atualiza o preço do ingresso para o novo
+valor. E um procedimento que recebe um parâmetro do tipo ingresso e
+mostra na tela os valores de seus campos.
+12) Faça um programa que avalie o preço de um eletrodoméstico em
+diferentes lojas. Faça a leitura das informações das lojas, que
+contenham os seguintes campos: nome da loja, telefone e preço do
+eletrodoméstico. Ao final, informe os dados de todas as lojas. Informe
+também a média dos preços cadastrados e uma relação contendo o
+nome e o telefone das lojas cujo preço estava abaixo da média. Utilize
+funções para realizar operações de leitura e escrita e faça um menu
+que possibilite ler todas as informações das lojas, ler uma loja com um
+endereço específico, caso ela esteja cadastrada, e imprimir as
+informações citadas anteriormente.
+
+13) Faça um programa que permita o cadastro de veículos. A
+classe veículo deverá conter os campos placa, marca,
+modelo e ano. Faça um menu com as seguintes opções:
+Menu:
+1 - Ler as informações de um veículo
+2 - Verificar se uma placa está no formato correto
+(AAADDDD)
+3 - Imprimir por ano
+4 - Pesquisar veículo por placa
+5 - Imprimir todos os veículos cadastrados
+O programa deverá ter as seguintes características:
+⚫ No primeiro item, peça inicialmente o índice do vetor
+que deseja alterar.
+⚫ No terceiro item, peça o ano mínimo e máximo e
+imprima os veículos que estão nesse intervalo.
+⚫ Faça funções para realizar as operações de cada um
+dos itens do menu. 45
+Exercícios
+
+14) Elabore um programa que auxilie no controle de uma
+fazenda de gado que possua um total de 100 cabeças de
+gado. O programa deverá conter uma classe que comporte:
+• código: código da cabeça de gado;
+• leite: número de litros de leite produzido por semana;
+• alimento: quantidade de alimento ingerida por semana (kg);
+• mês de nascimento;
+• ano de nascimento;
+• abate: ‘N”(não) ou ‘S’ (sim).
+
+O seu programa deverá conter um menu com as seguintes
+funcionalidades:
+(a) Ler a base de dados (código, leite, alimento, nascimento) informados
+pelo usuário e armazenar em um vetor de estruturas.
+(b) Preencher o campo abate, considerando que a cabeça de gado irá para
+o abate caso:
+• tenha mais de 5 anos, ou;
+• produza menos de 40 litros de leite por semana, ou;
+• produza entre 50 e 70 litros de leite por semana e ingira mais de 50
+quilos de alimento por semana.
+(c) Imprimir a quantidade total de leite produzida por semana na fazenda.
+(d) Imprimir a quantidade total de alimento consumido por semana na
+fazenda.
+(e) Imprimir a quantidade total de leite que vai ser produzido por semana na
+fazenda, após o abate
+(f) Imprimir a quantidade total de alimento que vai ser consumido por
+semana na fazenda, após o abate
+(g) Imprimir número de cabeças de gado que irão para o abate.
+(h) Inclua uma opção para sair do menu.

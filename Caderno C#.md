@@ -6,7 +6,8 @@
 
   Otávio Dioscânio /2020
 
-  
+
+[TOC]
 
 OS - Windows - Microsoff.Net - Framework64 - csc.exe
 
@@ -180,13 +181,13 @@ short vShort = (short) vInt;	// cuidado
 
 
 _________________________________________________________________
-###### Aula 12 - condicional if
+Aula 12 - condicional if
 
-###### Aula 13 - if, else if, else
+Aula 13 - if, else if, else
 
 - lembrar que pode mudar a ordem e que não precisa de duas expressões no condicional
 
-###### Aula 14 - if aninhados: if dentro de outro
+Aula 14 - if aninhados: if dentro de outro
 
 _________________________________________________________________
 ### Aula 15 - Switch case
@@ -815,7 +816,7 @@ static void Main () {
 
 ### Aula 32 - Operador This
 
-- Faz referência à propriedade da classe, e não do método. Ao objeto pai
+- Faz referência à propriedade da classe, e não do método. Ao objeto pai.
 
 ```C#
 class Calculos {
