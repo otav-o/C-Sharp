@@ -49,7 +49,7 @@ class Ex05 {
         Console.Write("Quantas pessoas participaram da pesquisa? ");
         int n = Convert.ToInt32(Console.ReadLine());
 
-        Pessoa [] pesquisa = new Pessoa[n];
+        Pessoa [] pesquisa = new Pessoa[n]; // vetor nulo.
 
         for (int i = 0; i < pesquisa.Length; i++) {
             Console.WriteLine("Pessoa {0}", i + 1);
