@@ -18,18 +18,17 @@ class Produto {
         }
     }
 
-}
-
-
-class Questao1 {
-
-    static double CalculaMediaPrecos(Produto [] vet) {
+    public static double CalculaMediaPrecos(Produto [] vet) {
         double soma = 0;
         for (int i = 0; i < vet.Length; i++) {
             soma += vet[i].preco;
         }
         return soma/vet.Length;
     }
+}
+
+
+class Questao1 {
     
     static Produto[] criarProdutos(int n) {
         Produto [] array = new Produto[n];
@@ -55,12 +54,13 @@ class Questao1 {
         Console.WriteLine("Produtos cujo preço está acima da média: ");
         for (int i = 0; i < vet.Length; i++) {
             if (vet[i].preco > media)
-                Console.WriteLine("{1,-15} R${1}", vet[i].desc, vet[i].preco);
+                Console.WriteLine("{0,-15} R${1}", vet[i].desc, vet[i].preco);
         }
     }
+
     static void Main() {
-        Produto [] array = criarProdutos(2);
-        double media = CalculaMediaPrecos(array);
+        Produto [] array = criarProdutos(50);
+        double media = Produto.CalculaMediaPrecos(array);
         imprimirProdutos(array, media); 
     }
-} // está com um erro muito estranho
+} // feito

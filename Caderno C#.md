@@ -1291,7 +1291,7 @@ static void Main(string[] args) { // array
 
 ---
 
-### Aula 52 - Exceções (parte 1) - Try Catch 
+### Aula 52 - Exceções (parte 1) - Try Catch
 
 - Exceções = erros
 
