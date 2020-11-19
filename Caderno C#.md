@@ -178,7 +178,22 @@ int vInt = 10;
 short vShort = (short) vInt;	// cuidado
 ```
 
+```c#
+decimal numeroGrande = 10;
+double numeroPequeno = 25;
 
+numeroPequeno = (double) numeroGrande;
+Console.WriteLine(numeroGrande + "  " + numeroPequeno);
+```
+
+```c#
+short valorPequeno = 100;
+long valorGrande = 25;
+
+valorGrande = valorPequeno; // não precisa do cast pois long > short
+
+Console.WriteLine(valorGrande);
+```
 
 _________________________________________________________________
 Aula 12 - condicional if
