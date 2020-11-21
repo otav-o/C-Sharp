@@ -8,3 +8,13 @@ C:\Users\Otávio estudos\source\repos\OlaMundo\OlaMundo\obj\Debug\OlaMundo.cspro
 C:\Users\Otávio estudos\source\repos\OlaMundo\OlaMundo\obj\Debug\OlaMundo.csproj.CoreCompileInputs.cache
 C:\Users\Otávio estudos\source\repos\OlaMundo\OlaMundo\obj\Debug\OlaMundo.exe
 C:\Users\Otávio estudos\source\repos\OlaMundo\OlaMundo\obj\Debug\OlaMundo.pdb
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos\Variáveis, métodos e rotinas\OlaMundo\bin\Debug\OlaMundo.exe.config
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos\Variáveis, métodos e rotinas\OlaMundo\bin\Debug\OlaMundo.exe
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos\Variáveis, métodos e rotinas\OlaMundo\bin\Debug\OlaMundo.pdb
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos\Variáveis, métodos e rotinas\OlaMundo\obj\Debug\OlaMundo.csprojAssemblyReference.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos\Variáveis, métodos e rotinas\OlaMundo\obj\Debug\OlaMundo.Form1.resources
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos\Variáveis, métodos e rotinas\OlaMundo\obj\Debug\OlaMundo.Properties.Resources.resources
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos\Variáveis, métodos e rotinas\OlaMundo\obj\Debug\OlaMundo.csproj.GenerateResource.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos\Variáveis, métodos e rotinas\OlaMundo\obj\Debug\OlaMundo.csproj.CoreCompileInputs.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos\Variáveis, métodos e rotinas\OlaMundo\obj\Debug\OlaMundo.exe
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos\Variáveis, métodos e rotinas\OlaMundo\obj\Debug\OlaMundo.pdb

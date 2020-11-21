@@ -24,6 +24,20 @@ namespace OlaMundo
             int idadeOtavio = 19;
             double media = (idadeOtavio + idadeRafael + idadeRicardo)/ 3;
             MessageBox.Show("A média das idades é: " + media);
+
+            Conta c1 = new Conta();
+            c1.Saldo = 1000;
+            Conta c2 = new Conta();
+            c2.Saldo = 2000;
+
+            c2.Transfere(c1, 500);
+
+            MessageBox.Show("c1 = R$" + c1.Saldo);
+            MessageBox.Show("c2 = R$" + c2.Saldo);
+
+
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -206,6 +220,61 @@ elemento somado ao (n-2)-ésimo elemento (ex: 8 = 5 + 3).*/
 4 8 12 16
 n n*2 n*3 .... n*n
             */
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Conta contaVictor = new Conta();
+            contaVictor.Titular = "Victor";
+            contaVictor.Numero = 1;
+            contaVictor.Saldo = 1000.00;
+
+            MessageBox.Show(contaVictor.Titular + " - saldo: R$" + contaVictor.Saldo);
+
+
+            Conta contaHelena = new Conta
+            {
+                Titular = "Helena",
+                Numero = 2,
+                Saldo = 1500
+            }; // VS que sugeriu isso
+
+            MessageBox.Show(contaHelena.Titular + " - saldo: R$" + contaHelena.Saldo);
+
+            contaHelena.Saca(200);
+            contaVictor.Deposita(500);
+
+            MessageBox.Show(contaVictor.Titular + " - saldo: R$" + contaVictor.Saldo);
+            MessageBox.Show(contaHelena.Titular + " - saldo: R$" + contaHelena.Saldo);
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Conta mauricio = new Conta();
+            mauricio.Numero = 1;
+            mauricio.Titular = "Mauricio";
+            mauricio.Saldo = 100;
+
+            Conta mauricio2 = new Conta();
+            mauricio2.Numero = 1;
+            mauricio2.Titular = "Mauricio";
+            mauricio2.Saldo = 100;
+
+            if (mauricio == mauricio2) MessageBox.Show("São contas iguais");
+            else MessageBox.Show("São diferentes"); // linha que é executada
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            Conta mauricio = new Conta(); // mauricio aponta a um objeto
+            mauricio.Saldo = 2000;
+
+            Conta copia = mauricio; // copia passa a apontar para esse objeto (não cria outro)
+            copia.Saldo = 3000;
+
+            MessageBox.Show("Mauricio = " + mauricio.Saldo); // são o mesmo objeto, os dois imprimem 3000
+            MessageBox.Show("Copia = " + copia.Saldo); // duas variáveis, um objeto
         }
     }
 }

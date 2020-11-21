@@ -1130,6 +1130,7 @@ public void info() {}
 - Como **não é classe**, não pode herdar nem servir como base
   - Mas pode ter construtores
   - Construtor vai ser chamado desde que o operador new seja usado na instanciação do objeto (como já sabemos)
+- Tipo valor, e não referência
 
 ```c#
 struct Carro {
