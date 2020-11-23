@@ -131,14 +131,15 @@ public void transfere (Conta destino, double valor)
   - Argumentos de métodos: **camelCasing**
 
 ```c#
-            Conta mauricio = new Conta(); // mauricio aponta a um objeto
-            mauricio.Saldo = 2000;
+Conta mauricio = new Conta(); // mauricio aponta a um objeto
+mauricio.Saldo = 2000;
 
-            Conta copia = mauricio; // copia passa a apontar para esse objeto (não cria outro)
-            copia.Saldo = 3000;
+Conta copia = mauricio; // copia passa a apontar para esse objeto (não cria outro)
+copia.Saldo = 3000;
 
-         	 MessageBox.Show("Mauricio = " + mauricio.Saldo); // são o mesmo objeto, os dois imprimem 3000
-            MessageBox.Show("Copia = " + copia.Saldo); // duas variáveis, um objeto
+MessageBox.Show("Mauricio = " + mauricio.Saldo); // são o mesmo objeto, os dois imprimem 3000
+MessageBox.Show("Copia = " + copia.Saldo); // duas variáveis, um objeto
 ```
 
 - Inclusive, objetos são sempre diferentes entre si, mesmo que tenham os mesmos valores de propriedade. Usou o `new`, o espaço na memória é diferente
+- 

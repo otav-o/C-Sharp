@@ -12,6 +12,7 @@ class Questao1 {
         return soma/mat.GetLength(0); // quase errei. Ia enviar com GetLength(1)
     }
 
+
     static void Main() {
         int[,] matriz = new int[3,2] {{1, 2}, {1, 2}, {1, 2}};
         Console.WriteLine(mediaUltimaColuna(matriz));

@@ -616,7 +616,8 @@ static void somaFlexivel (params int[] nomeArray) {
   - **static**: o método pode ser chamado mesmo sem instanciar um objeto
     - pode usar o membro static sem precisar do <u>New</u> para instanciar
 
-  
+
+
 
 - Futuramente: métodos construtores, destrutores
 
@@ -624,9 +625,22 @@ static void somaFlexivel (params int[] nomeArray) {
 
 - Obs.: ainda não sei os defaults de class, main, variáveis
 
--  As classes e estruturas por padrão são `internal`, já os membros de classe/estrutura são privados por padrão.
+- As classes e estruturas por padrão são `internal`, já os membros de classe/estrutura são privados por padrão.
 
-- `new`: vai alocar a memória para um objeto e retornar o endereço dela
+  - Quando queremos trabalhar com bibliotecas externas ao projeto, nossas classes precisam ser declaradas com a visibilidade public
+
+  - ```c#
+    class Cliente { // internal class Cliente
+    
+    }
+    ```
+
+#### Variáveis que apontam para objetos
+
+- Uma vez que um objeto é criado, ele ganha uma posição estática na memória. Possui seus próprios atributos independentemente.
+- É possível que mais de uma variável aponte para o mesmo objeto e, caso haja modificação deste, ambas as variáveis também irão mudar.
+
+- `new`: aloca a memória para um objeto e retornar o endereço dela
 
 ```C#
 public class Jogador {
@@ -652,13 +666,36 @@ public class Aula28 {
 }
 ```
 
+- 
+
+```c#
+Conta mauricio = new Conta(); // mauricio aponta a um objeto
+mauricio.Saldo = 2000;
+
+Conta copia = mauricio; // copia passa a apontar para esse objeto (não cria outro)
+copia.Saldo = 3000;
+
+MessageBox.Show("Mauricio = " + mauricio.Saldo); // 3000
+MessageBox.Show("Copia = " + copia.Saldo); // 3000
+```
+
+- 
+
+```
+
+```
+
+
+
 ---
 
 ### Aula 29 - Construtores e Destrutores
 
 - <u>Método construtor</u>: atua no objeto quando instanciado, tem a função de inicializar as propriedades/variáveis.
 - Toda classe tem um construtor, mesmo que não seja explícito
-- Basta que o método tenha o mesmo nome da classe 
+  - construtor padrão dentro da classe - não recebe argumentos e não executa nenhuma ação (tem o corpo vazio)
+- Basta que o método tenha o mesmo nome da classe
+  - `public`+`NomeDaClasse(){ }`
 
 ```C#
 public class Jogador {
@@ -853,7 +890,7 @@ class Calculos {
 
 ### Aula 33 - Public vs Private
 
-- Propriedades `private` são inacessíveis fora da classe.
+- Propriedades `private` são inacessíveis fora da classe, tanto para escrita quanto para leitura.
 - Proteção aos membros: não dá para mudar/acessar sem um método público que permita.
   - define-se, inclusive, os valores aplicáveis à variável, se fosse `public` qualquer valor seria aceito.
   - filtro do valor a ser atribuído
@@ -1028,34 +1065,50 @@ sealed class Comida {
 
 ---
 
-### Aula 41 - Acessors GET e SET
+### Aula 41 - Acessors GET e SET - encapsulamento
 
-- Propriedade especial e flexível
 - É possível ler, atribuir ou calcular pela propriedade Acessor
-- Tem comportamento de método
-- Não é obrigatório implementar um `get` (read) e um `set` (write) juntos
-- Obs.: `value` é o valor atribuído à propriedade.
+- Nunca devemos expor os atributos da classe utilizando o `public`. 
+  - Inclusive usar os Acessors facilita a manutenção do código, caso sejam alteradas as regras de negócio.
+  - **Deixar o set privado** é importante também, pois de nada vale deixar outras classes modificarem o atributo pela propriedade - o encapsulamento seria inútil.
+- Não é obrigatório implementar um `get` (read) e um `set` (write) juntos. Inclusive eles podem ser privados
+- `value` é o valor atribuído à propriedade.
 
 ```c#
-public int pes {	// não possui parâmetros
+public int Peso {	// não possui parâmetros
     
 	get {
 		return peso;
 	}
     
-	set {			// não confundir pes com peso!
-		if (value < 0) peso = 0;
-		else if (value > 200) peso = 200;
-		else peso = value;
+	private set {			// não confundir Peso com peso!
+		if (value < 0) 
+            peso = 0;
+		else if (value > 200) 
+            peso = 200;
+		else 
+            peso = value;
         
 	}  				// set não tem return
 }
 ```
 
 ```c#
-bicho.pes = 140;	// usa o acessor set
-Console.WriteLine("Peso: " + bicho.pes); // usa o get
+bicho.Peso = 140;	// usa o acessor set
+Console.WriteLine("Peso: " + bicho.Peso); // usa o get
 ```
+
+- **Auto-implemented properties** - a partir do C# 3.0
+  - ao utilizarmos as auto-implemented properties, **só podemos acessar o valor do atributo declarado através da propriedade** (mesmo que seja de dentro da classe).
+
+```c#
+class Conta
+{
+	public int Numero { get; set; }
+}
+```
+
+
 
 ---
 
@@ -1386,9 +1439,17 @@ try {
 
 - Controle de escopo.
 - Pode-se classificar os elementos dentro do Namespace. Agrupamento de classes por tipo.
-- É possível ter duas classes ou funções de mesmo nome mas em namespaces diferentes.
+- **É possível ter duas classes ou funções de mesmo nome** mas em namespaces diferentes.
   - o local/escopo é diferente
   - Na hora de chamar deve-se indicar o namespace
+- `System.Console.WriteLine();`
+- Boa prática: todas as classes devem ser definidas em um namespace
+- Diretiva `using`: traz todas as classes de um namespace para o escopo do projeto
+  - Não é preciso qualificar explicitamente
+- Assembly/montagem: classes compiladas em Assemblies - arquivos usualmente com a extensão .dll
+  - Uma montagem pode conter classes definidas em muitos namespaces, e um namespace pode ocupar vários assemblies
+  - Para usarmos as classes de um assembly, precisamos adicionar uma referência no projeto, e incluir a diretiva using adequada
+- Referência: permite que utilizamos tipos disponíveis em outros Assemblies
 
 ```c#
 namespace Calc1 {

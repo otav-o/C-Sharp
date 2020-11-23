@@ -1,0 +1,16 @@
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\obj\Debug\net5.0\SistemaBancario.csprojAssemblyReference.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\obj\Debug\net5.0\SistemaBancario.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\obj\Debug\net5.0\SistemaBancario.AssemblyInfoInputs.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\obj\Debug\net5.0\SistemaBancario.AssemblyInfo.cs
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\obj\Debug\net5.0\SistemaBancario.csproj.CoreCompileInputs.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\bin\Debug\net5.0\SistemaBancario.exe
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\bin\Debug\net5.0\SistemaBancario.deps.json
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\bin\Debug\net5.0\SistemaBancario.runtimeconfig.json
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\bin\Debug\net5.0\SistemaBancario.runtimeconfig.dev.json
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\bin\Debug\net5.0\SistemaBancario.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\bin\Debug\net5.0\ref\SistemaBancario.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\bin\Debug\net5.0\SistemaBancario.pdb
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\obj\Debug\net5.0\SistemaBancario.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\obj\Debug\net5.0\ref\SistemaBancario.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\obj\Debug\net5.0\SistemaBancario.pdb
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\C# OO (Caelum)\Códigos modo console\SistemaBancario\obj\Debug\net5.0\SistemaBancario.genruntimeconfig.cache
