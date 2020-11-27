@@ -37,14 +37,20 @@ __________________________________________________________________
 ### Aula 3 - Variáveis
 
 - int num;	//deixa ele como 0
+
 - Declaração e atribuição
+
 - primitivas: int, char, float, byte
 	`float valor = 3.2f`
 	`byte n1 = 10; // entre 0 e 255, não tem sinal. 8 bits`
+	
 - String não é primitiva
 
 	`var numero = 10; //quando não quiser especificar o tipo. É atribuído na compilação`
 
+	- Variáveis **dentro de métodos** podem ser declaradas como var em C# que o seu tipo é inferido automaticamente. Para o compilador acertar qual o tipo da variável ela deve ser inicializada no mesmo instante que é declarada e não pode ser atribuído o valor null.
+	- Atenção: usar var não deixa de definir bem o tipo. Este não pode ser alterada à medida que o código é executado!
+	
 	`int num1=0, num2=0;`
 
 ____________________________________________________________________
@@ -638,7 +644,7 @@ static void somaFlexivel (params int[] nomeArray) {
 #### Variáveis que apontam para objetos
 
 - Uma vez que um objeto é criado, ele ganha uma posição estática na memória. Possui seus próprios atributos independentemente.
-- É possível que mais de uma variável aponte para o mesmo objeto e, caso haja modificação deste, ambas as variáveis também irão mudar.
+- É possível que mais de uma variável aponte para o mesmo objeto e, caso haja modificação deste, será visível para todas as variáveis ao mesmo tempo
 
 - `new`: aloca a memória para um objeto e retornar o endereço dela
 
@@ -678,14 +684,6 @@ copia.Saldo = 3000;
 MessageBox.Show("Mauricio = " + mauricio.Saldo); // 3000
 MessageBox.Show("Copia = " + copia.Saldo); // 3000
 ```
-
-- 
-
-```
-
-```
-
-
 
 ---
 
@@ -765,6 +763,8 @@ Jogador j1 = new Jogador();
 Jogador j3 = new Jogador ("Théo", 50);
 	// etc
 ```
+
+- No C#, ao invés de fazer sobrecarga de construtores, pode ser bom utilizar parâmetros opcionais com valores padrão.
 
 ---
 
@@ -899,7 +899,7 @@ class Calculos {
 
 ### Aula 34 - Herança
 
-- É um recurso da POO em que uma **classe derivada** (filha) herda membros, propriedades e classes de uma **classe base** (pai) 
+- É um recurso da POO em que uma **classe derivada** (filha, subclasse) herda membros, propriedades e classes de uma **classe base** (pai, base) 
 - Evidentemente, a classe derivada pode ter seus membros próprios
 - Importante: só herda o que for `public`
 
@@ -910,6 +910,9 @@ class Carro:Veiculo {
 ```
 
 - Pode ter espaço entre os dois
+- Caso queira modificar a regra de negócio de um método:
+  - Colocar `virtual` no método da classe pai, dizendo que ele pode ser sobrescrito pela filha
+  - Reescrever o método na filha com `override` antes
 
 ---
 
@@ -968,11 +971,10 @@ return (ligado ? "sim" : "não");
 
 ### Aula 36 - Membros Protected
 
-- <u>Private</u>: restringe à classe. Só é possível acessar de fora por métodos (públicos) da própria classe.
+- Atributos privados só são visíveis para a classe que os declarou. Os filhos não enxergam.
 
-  - Classe derivada não tem acesso
-
-- <u>Protected</u>: é igual ao private, mas permite acesso também pelas classes derivadas
+- Atributos/métodos marcados como `protected` são visíveis apenas para a própria classe e para as classes filhas.
+- No exemplo anterior Veiculo não conseguiria acessar propriedades ou atributos private.
 
 
 ---
@@ -994,12 +996,12 @@ return (ligado ? "sim" : "não");
 - **Override**: vai sobrescrever em uma classe derivada
 
 ```c#
-virtual public void info() { // quem é virtual pode ser sobrescrito
+virtual public void info() { // quem é virtual pode ser sobrescrito. Está na classe pai
 
 }
 // ...
 
-override public void info() { // sobrescreve
+override public void info() { // sobrescreve. Está na classe filha
 
 }
 // ...
@@ -1012,10 +1014,25 @@ deriv2.info();
 ```
 
 - Não precisa codificar o método virtual, já que ele não será executado, deixe o espaço entre chaves vazio (não precisa de definições, só da assinatura)
-
 - Percebi que usar as palavras `virtual` ou `override` só evitar warnings, mas o código compila sem elas.
 
-##### Ref
+#### Base
+
+- É possível reutilizar o comportamento do método da classe pai, usando a palavra `base`
+
+```c#
+public class ContaPoupanca : Conta
+{
+	public override void Saca(double valor)
+	{
+		base.Saca(valor + 0.10);
+	}
+}
+```
+
+
+
+#### Ref
 
 ```C#
 Base Ref;
@@ -1034,13 +1051,13 @@ Ref.info();	// "Derivada2"
 - Classe abstrata: classe de referência/base para outras classes que vão herdar dela.
   - Não dá para instanciar objetos!
   - Não pode ser `sealed` ou `abstract`
-- Em métodos abstratos, não se implementa o comportamento, cria-se apenas o protótipo que vai servir como guia para as classes herdeiras. Não há conteúdo.
+- **Em métodos abstratos**, não se implementa o comportamento, cria-se apenas o protótipo que vai servir como guia para as classes herdeiras. Não há conteúdo.
   - Obriga que as classes derivadas implementem os métodos
-- Métodos não abstratos: contém a implementação, que é obrigatória.
+- Métodos não abstratos: contêm a implementação, que é obrigatória.
 - Esqueceu? [Veja aqui](#Tipos Classe)
 
 ```c#
-abstract public void aumentarPeso(int peso);
+abstract public void aumentarPeso(int peso); // molde
 ```
 
 ```c#
@@ -1049,7 +1066,7 @@ override public void aumentarPeso(int peso){
 }
 ```
 
-- Resumo: é um guia, obriga implementação, não tem código, usar ponto e vírgula.
+- Resumo: é um guia, obriga implementação, não tem código. Usar ponto e vírgula.
 
 ---
 
@@ -1432,6 +1449,7 @@ try {
 ```
 
 - Veja no código da aula a mensagem criada em um método  de uma classe.
+- throw new Exception("Mensagem") pode estar em qualquer lugar do código
 
 ---
 
