@@ -765,6 +765,20 @@ Jogador j3 = new Jogador ("Théo", 50);
 ```
 
 - No C#, ao invés de fazer sobrecarga de construtores, pode ser bom utilizar parâmetros opcionais com valores padrão.
+- Um construtor pode chamar outro: `this(parametro)`
+
+```c#
+Conta (String titular) {
+	this.titular = titular;
+}
+
+Conta (int numero, String titular) {
+	this(titular); // chama o construtor de cima
+	this.numero = numero;
+}
+```
+
+
 
 ---
 
@@ -1057,7 +1071,7 @@ Ref.info();	// "Derivada2"
 - Esqueceu? [Veja aqui](#Tipos Classe)
 
 ```c#
-abstract public void aumentarPeso(int peso); // molde
+abstract public void aumentarPeso(int peso); // é obrigatório que seja sobrescrito
 ```
 
 ```c#
@@ -1067,6 +1081,7 @@ override public void aumentarPeso(int peso){
 ```
 
 - Resumo: é um guia, obriga implementação, não tem código. Usar ponto e vírgula.
+- Uma classe abstrata pode não ter um método abstrato, mas **todo método abstrato precisa estar em uma classe abstrata**
 
 ---
 
@@ -1191,6 +1206,9 @@ class Carro:Veiculo, Combate{
 ```c#
 public void info() {}
 ```
+
+- Utilidade (exemplo): somente algumas herdeiras de uma classe vão ter determinado método da classe pai. Como não dá para usar polimorfismo (pois se aplica a todas as filhas) .... CONTINUE
+- Métodos declarados dentro de uma interface nunca têm implementação e sempre são públicos.
 
 ---
 
@@ -1666,7 +1684,7 @@ List<string>carros = new List<string>();
 ```
 
 - **`lista.Add(valor)`**
-  - testar se o add funciona com LinkedList
+  - obs.: testar se o add funciona com LinkedList
 
 ```c#
 veiculos.Add("HRV");
