@@ -34,5 +34,8 @@ Bom trabalho!
 
 Camillo
 
-## Planejamento
+---
 
+- Pelo visto não dá para usar o foreach quando o vetor tiver elementos nulos!
+
+![image-20201221142712185](image-20201221142712185.png)

@@ -28,7 +28,7 @@ namespace CadastroProdutos
         internal void AumentaPreco(double porcentagem)
         {
             if (porcentagem < 0) porcentagem *= -1;
-            this.Preco *= porcentagem;
+            this.Preco *= (1 + porcentagem);
         }
 
         /// <summary>
@@ -40,11 +40,6 @@ namespace CadastroProdutos
             if (porcentagem < 0) porcentagem *= -1;
             this.Preco *= (1 - porcentagem);
         }
-
-
-
-
-
 
         /// <summary>
         /// Número inteiro que identifica o produto.

@@ -6,16 +6,38 @@ namespace CadastroProdutos
     {
         static void Main(string[] args)
         {
-            direcionaResposta(executarMenu());
+            Console.WriteLine("Bem-vindo ao gerenciador de produtos".ToUpper());
+
+            direcionaResposta();
+
+            Console.WriteLine("O programa foi finalizado em " + DateTime.Now);
+
+
+        }
+
+        /// <summary>
+        /// Procedimento recursivo que chama métodos com base na resposta do usuário.
+        /// </summary>
+        private static void direcionaResposta()
+        {
+            char resp = executaMenu();
+
+            if (resp == 'a') VetorProdutos.CadastrarProduto();
+            else if (resp == 'b') VetorProdutos.AtualizarPreco();
+            else if (resp == 'c') VetorProdutos.ImprimirPrecoMedio();
+            else if (resp == 'd') VetorProdutos.MostrarProdutos();
+            else if (resp == 'x') return; // finaliza o procedimento
+
+            direcionaResposta();
+
         }
 
         /// <summary>
         /// Menu principal que exibe opções ao usuário e devolve sua resposta.
         /// </summary>
-        private static char executarMenu()
+        private static char executaMenu()
         {
-            Console.Write("-=-=-=-=-=-=-=" +
-                "\nBem-vindo ao gerenciador de produtos" +
+            Console.Write("--------------------------" +
                 "\n[a] Cadastrar produto" +
                 "\n[b] Atualizar preço" +
                 "\n[c] Imprimir preço médio" +
@@ -24,30 +46,10 @@ namespace CadastroProdutos
                 "\nDigite a letra da opção desejada: ");
 
             char resp = Convert.ToChar(Console.ReadLine().ToLower().Trim());
+            Console.WriteLine("--------------------------");
             return resp;
             // TODO implementar exceção
         }
-
-        private static void direcionaResposta(char resp)
-        {
-            if (resp == 'a') VetorProdutos.CadastrarProduto();
-            if (resp == 'b') VetorProdutos.AtualizarPreco();
-            if (resp == 'c') VetorProdutos.ImprimirPrecoMedio();
-            if (resp == 'd') VetorProdutos.MostrarProdutos();
-            if (resp == 'x') Finalizar();
-            
-        }
-
-        private static void Finalizar()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void CadastrarProduto()
-        {
-            
-        }
-
 
     }
 }

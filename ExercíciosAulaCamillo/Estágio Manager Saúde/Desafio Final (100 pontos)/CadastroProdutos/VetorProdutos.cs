@@ -9,9 +9,10 @@ namespace CadastroProdutos
     /// </summary>
     static class VetorProdutos
     {
+
         private const int V = 100;
+
         public static Produto[] Produtos { get; private set; } = new Produto[V];
-        public static double MediaPrecos { get; private set; }
         public static int QuantidadeCadastrada { get; set; } = 0;
 
         /// <summary>
@@ -38,7 +39,6 @@ namespace CadastroProdutos
 
                 // QuantidadeCadastrada pertence ao vetor de produtos
                 QuantidadeCadastrada++;
-                // TODO substituir por uma exceção
             }
             else
             {
@@ -47,34 +47,54 @@ namespace CadastroProdutos
                 // TODO substituir por uma exceção
             }
         }
-
+        /// <summary>
+        /// Imprime todos os produtos e suas propriedades
+        /// </summary>
         internal static void MostrarProdutos()
         {
-            foreach (Produto p in Produtos) // TODO checar se isso chega nas posições nulas
+            for (int i = 0; i < QuantidadeCadastrada; i++) // o foreach percorre posições nulas e dá erro
             {
+                Produto p = Produtos[i];
                 Console.WriteLine("Cod.: {0}" +
                     "\n  Descrição: {1}" +
-                    "\n  Preço: {2}" +
-                    "\n  Custo: {3}",
+                    "\n  Preço: R${2:N2}" +
+                    "\n  Custo: R${3:N2}",
                     p.Codigo, p.Descricao, p.Preco, p.Custo);
             }
         }
 
+        /// <summary>
+        /// Chama a função CalculaPrecoMedio() e imprime o resultado
+        /// </summary>
         internal static void ImprimirPrecoMedio()
         {
-            Console.WriteLine("O preço médio de {0} produtos cadastrados é R${1.N2}.", QuantidadeCadastrada, MediaPrecos);
-            // TODO talvez remover a propriedade MediaPrecos e fazer uma função que calcula isso de uma vez só
+            Console.WriteLine("O preço médio de {0} produtos cadastrados é R${1:N2}.", QuantidadeCadastrada, CalculaPrecoMedio());
         }
 
+        /// <summary>
+        /// Percorre o vetor Produtos, calcula e retorna o preço médio deles
+        /// </summary>
+        /// <returns></returns>
+        private static double CalculaPrecoMedio()
+        {
+            double soma = 0;
+            for (int i = 0; i < QuantidadeCadastrada; i++)
+            {
+                soma += Produtos[i].Preco;
+            }
+            return soma / QuantidadeCadastrada;
+        }
 
         /// <summary>
         /// Lê as informações do usuário e chama Produto.AumentaPreco() e Produto.ReduzPreco()
         /// </summary>
         internal static void AtualizarPreco()
         {
+            // Ler o código do produto
             Console.Write("** Atualização de preço\nDigite o código do produto: ");
             int cod = Convert.ToInt32(Console.ReadLine());
 
+            // Receber o produto
             Produto p = BuscarProduto(cod);
 
             // TODO tratar exceção buscar produto
@@ -90,10 +110,8 @@ namespace CadastroProdutos
             if (respAouR == 'a') p.AumentaPreco(porcentagem);
             else if (respAouR == 'r') p.ReduzPreco(porcentagem);
 
-
+            Console.WriteLine("Sucesso. Novo preço: R${0:N2}", p.Preco);
         }
-
-  
 
         /// <summary>
         /// Retorna um produto do vetor da classe. 
