@@ -21,6 +21,30 @@ namespace CadastroProdutos
             this.Custo = custo;
         }
 
+        /// <summary>
+        /// Recebe um número entre 0 e 1
+        /// </summary>
+        /// <param name="porcentagem"></param>
+        internal void AumentaPreco(double porcentagem)
+        {
+            if (porcentagem < 0) porcentagem *= -1;
+            this.Preco *= porcentagem;
+        }
+
+        /// <summary>
+        /// Recebe um número entre 0 e 1
+        /// </summary>
+        /// <param name="porcentagem"></param>
+        internal void ReduzPreco(double porcentagem)
+        {
+            if (porcentagem < 0) porcentagem *= -1;
+            this.Preco *= (1 - porcentagem);
+        }
+
+
+
+
+
 
         /// <summary>
         /// Número inteiro que identifica o produto.
@@ -42,5 +66,6 @@ namespace CadastroProdutos
         /// </summary>
         public double Custo { get; private set; }
 
+        
     }
 }
