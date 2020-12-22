@@ -1,0 +1,6 @@
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\ExceptionsLibrary\bin\Debug\ExceptionsLibrary.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\ExceptionsLibrary\bin\Debug\ExceptionsLibrary.pdb
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\ExceptionsLibrary\obj\Debug\ExceptionsLibrary.csprojAssemblyReference.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\ExceptionsLibrary\obj\Debug\ExceptionsLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\ExceptionsLibrary\obj\Debug\ExceptionsLibrary.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\ExceptionsLibrary\obj\Debug\ExceptionsLibrary.pdb

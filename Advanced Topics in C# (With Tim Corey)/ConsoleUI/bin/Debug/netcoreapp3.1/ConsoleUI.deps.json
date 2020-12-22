@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ConsoleUI/1.0.0": {
+        "dependencies": {
+          "ExceptionsLibrary": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleUI.dll": {}
+        }
+      },
+      "ExceptionsLibrary/1.0.0": {
+        "runtime": {
+          "ExceptionsLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExceptionsLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

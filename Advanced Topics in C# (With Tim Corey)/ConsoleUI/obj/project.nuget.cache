@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "oT8CwAknWzOjVyGXinKZy2E0Z8sDqHd6K+U/J+z3lN0ZsLDjFJ37C1LrnANaJS62eO95SCLerd9ZW07puvGZ4g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Otávio estudos\\Documents\\Vivobook GitHub\\C-Sharp\\Advanced Topics in C# (With Tim Corey)\\ConsoleUI\\ConsoleUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Otávio estudos\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Otávio estudos\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}
