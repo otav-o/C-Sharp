@@ -12,7 +12,7 @@ namespace CadastroProdutos
 
             Console.WriteLine("O programa foi finalizado em " + DateTime.Now);
 
-
+            Console.ReadLine();
         }
 
         /// <summary>
@@ -48,8 +48,10 @@ namespace CadastroProdutos
             char resp = Convert.ToChar(Console.ReadLine().ToLower().Trim());
             Console.WriteLine("--------------------------");
             return resp;
-            // TODO implementar exceção
         }
 
     }
 }
+/* TODO verificar como as exceções entrariam nesse programa e como seriam lançadas na cadeia de métodos (onde eu as colocaria? no primeiro ou último método?)
+ * TODO criar uma biblioteca somente com as classes separada da interface do usuário (VetorProdutos está adequado? Leitura de dados somente na classe Program?) 
+ * TODO perguntar para o Camillo como ele resolveria esse desafio*/

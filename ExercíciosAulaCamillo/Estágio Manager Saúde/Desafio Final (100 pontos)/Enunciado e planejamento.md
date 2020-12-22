@@ -36,6 +36,6 @@ Camillo
 
 ---
 
-- Pelo visto não dá para usar o foreach quando o vetor tiver elementos nulos!
+- Pelo visto não dá para usar o foreach quando o vetor tiver elementos nulos (pois dá um erro ao tentar capturar uma propriedade)
 
 ![image-20201221142712185](image-20201221142712185.png)
