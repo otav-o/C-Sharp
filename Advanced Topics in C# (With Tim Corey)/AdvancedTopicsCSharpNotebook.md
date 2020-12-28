@@ -35,7 +35,7 @@
 
 ---
 
-## Handling Exceptions in C# - Whent to catch them, where to catch them, and how to catch them
+## Handling Exceptions in C# - When to catch them, where to catch them, and how to catch them
 
 ```c#
 Console.WriteLine($"The value at the given position is {result}");
@@ -47,19 +47,19 @@ select some code, right click and select snippet to generate blocks fast
 
 ```c#
 int output = 0;
-            try
-            {
-                int[] numbers = new int[] { 1, 4, 7, 2 };
-                output = numbers[position];
-            }
-            catch (Exception ex) // put the exception into ex
-            {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.StackTrace); // says where the problem is (offending line)
+try
+{
+    int[] numbers = new int[] { 1, 4, 7, 2 };
+    output = numbers[position];
+}
+catch (Exception ex) // put the exception into ex
+{
+    Console.WriteLine(ex.Message);
+    Console.WriteLine(ex.StackTrace); // says where the problem is (offending line)
 
-            }
+}
 
-            return output;
+return output;
 ```
 
 In general, putting try-catch as high as possible is valuable because you receive more information from `Console.WriteLine(ex.StackTrace);` (all methods there was a problem) 
@@ -69,24 +69,24 @@ full history from the root call all the way through actual exception. You know h
 ```c#
 int output = 0;
 
-            Console.WriteLine("Open Database Connection");
+Console.WriteLine("Open Database Connection");
 
-            try
-            {
-                output = ParentMethod(position);
-            }
-            catch (Exception ex)
-            {
-                throw; // catch the exception and immediately pass it up the chain
-            }
-            finally // runs with exception or not before passing exception
-            {
-                Console.WriteLine("Close Database Connection");
-                // don't put code here that might an exception
-            }
-            
+try
+{
+    output = ParentMethod(position);
+}
+catch (Exception ex)
+{
+    throw; // catch the exception and immediately pass it up the chain
+}
+finally // runs with exception or not before passing exception
+{
+    Console.WriteLine("Close Database Connection");
+    // don't put code here that might an exception
+}
 
-            return output;
+
+return output;
 ```
 
 finally runs first
@@ -103,4 +103,16 @@ catch (Exception ex)
 }
 ```
 
-// 40 min
+inner exception
+
+gives us full stack  for the original exception but also allows us to have a custom message and maybe even a different exception type (e.g. argument exception)
+
+it runs the first catch block that matches (so order blocks from most specific to the least)
+
+your library should just go ahead and throw exceptions, use catch only in UI. Let the caller deal with the exception
+
+### Performance considerations (.NET doc)
+
+Throwing or handling an exception consumes a significant amount of system resources and execution time. Throw exceptions only to handle truly extraordinary conditions, not to handle predictable events or flow control. For example, in some cases, such as when you're developing a class library, it's reasonable to throw an exception if a method argument is invalid, because you expect your method to be called with valid parameters. An invalid method argument, if it is not the result of a usage error, means that something extraordinary has occurred. Conversely, do not throw an exception if user input is invalid, because you can expect users to occasionally enter invalid data. Instead, provide a retry mechanism so users can enter valid input. Nor should you use exceptions to handle usage errors. Instead, use [assertions](https://docs.microsoft.com/en-us/visualstudio/debugger/assertions-in-managed-code) to identify and correct usage errors.
+
+In addition, do not throw an exception when a return code is sufficient; do not convert a return code to an exception; and do not routinely catch an exception, ignore it, and then continue processing.

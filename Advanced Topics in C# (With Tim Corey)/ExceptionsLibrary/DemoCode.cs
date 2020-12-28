@@ -20,10 +20,13 @@ namespace ExceptionsLibrary
             }
             catch (Exception ex)
             {
-                throw; // catch the exception and immediately pass it up the methods chain
+                // throw; // catch the exception and immediately pass it up the methods chain
                 // it's not in the UI layer (doesn't know if it is a console app or a form) so it cannot display messages.
 
                 // not equivalent to 'throw ex' - it rewrites the stack and gives you wrong infomation!
+                // throw new Exception("I blew up"); 
+
+                throw; // new ArgumentException("You passed in bad data", ex);
             }
             finally // runs with exception or not before passing exception
             {
