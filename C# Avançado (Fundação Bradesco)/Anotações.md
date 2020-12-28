@@ -192,4 +192,72 @@ SqlCommand cmd = new SqlCommand("querySQL", conexao);
 
 - SQL Server: `System.Data.SqlClient`
 - Oracle: `System.Data.OracleClient`
-- etc
+- etc.
+
+### Etapas para conexão com BD
+
+1. Connection
+   - Criar um objeto de conexão (SqlConnection)
+2. Command
+   - Criar um objeto de execução - comando SQL
+3. Open
+   - Abrir uma conexão com o banco de dados
+4. Executar
+   - Executar o comando SQL e processar o resultado - DataAdapter, DataSet, DataReader, DataTable
+5. Close
+   - Fechar a conexão com o banco de dados.
+
+### Desenvolvimento em camadas
+
+- Evitar redundância, organizar melhor o código, separar as responsabilidades, aumentar a reusabilidade.
+
+  - Metodologia robusta e altamente recomendável
+
+- **Cada camada é um projeto adicionado à solução**
+
+- Camadas:
+
+  - UI (User Interface)
+    - Interação com os usuários. 
+    - Interface, forms.
+    - Faz referência às camadas BLL e DTO
+  - BLL (Business Logic Player)
+    - Regras de negócio - lógica da aplicação, cálculos, etc.
+    - Class Library
+    - Faz referência às camadas DAL e DTO
+
+  - DTO
+    - Objetos (tabelas)
+    - Class Library
+    - Essa camada não faz referência a ninguém
+  - DAL (Data Access Layer)
+    - Responsável pelo acesso a dados
+    - Também Class Library
+    - Faz referência somente ao DTO
+
+#### Como adicionar referências
+
+- Add > references
+
+### Nyktuoke /dicynebt Ubter
+
+### Multiple Document Interface (MDI)
+
+- Form principal que terá o menu que chamará outros forms.
+
+- Na camada UI > add > MIDI Parent Form
+
+- Definir no Program.cs que a aplicação vai se iniciar por este formulário
+
+```c#
+Application.Run(new MDIParent1());
+```
+
+  ![image-20201227224515500](image-20201227224515500.png)
+
+
+
+
+
+![image-20201227225741059](image-20201227225741059.png)
+
