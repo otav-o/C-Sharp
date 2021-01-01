@@ -116,3 +116,67 @@ your library should just go ahead and throw exceptions, use catch only in UI. Le
 Throwing or handling an exception consumes a significant amount of system resources and execution time. Throw exceptions only to handle truly extraordinary conditions, not to handle predictable events or flow control. For example, in some cases, such as when you're developing a class library, it's reasonable to throw an exception if a method argument is invalid, because you expect your method to be called with valid parameters. An invalid method argument, if it is not the result of a usage error, means that something extraordinary has occurred. Conversely, do not throw an exception if user input is invalid, because you can expect users to occasionally enter invalid data. Instead, provide a retry mechanism so users can enter valid input. Nor should you use exceptions to handle usage errors. Instead, use [assertions](https://docs.microsoft.com/en-us/visualstudio/debugger/assertions-in-managed-code) to identify and correct usage errors.
 
 In addition, do not throw an exception when a return code is sufficient; do not convert a return code to an exception; and do not routinely catch an exception, ignore it, and then continue processing.
+
+---
+
+## Random numbers in C#
+
+> 30/12/2020
+
+```c#
+class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+
+            // if you don't pass any value it will take the current tick of the clock as starter number - and that is awesome
+            // only creates a Random object once and for everything else call .Next() method. Exception: thread safe
+            // if you use a seed number (in the constructor) the results will be known and you can recreate random number
+            // if you need something that has to be absolutely random then use the cryptographic library
+
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    //Console.WriteLine(random.Next(5, 11));
+            //    // pass 11 to generate from 0 to 10
+            //    // pass 5, 11 to generate from 5 to 10
+
+            //    Console.WriteLine(random.NextDouble()*10);
+
+            //    SimpleMethod(random);
+            //}
+
+            List<PersonModel> people = new List<PersonModel>
+            {
+                new PersonModel {FirstName = "Tim"},
+                new PersonModel {FirstName = "Sue"},
+                new PersonModel {FirstName = "Mary"},
+                new PersonModel {FirstName = "George"},
+                new PersonModel {FirstName = "Jane"},
+                new PersonModel {FirstName = "Nancy"},
+                new PersonModel {FirstName = "Bob"}
+            };
+
+            // var sortedPeople = people.OrderBy(x => x.FirstName);
+            var sortedPeople = people.OrderBy(x => random.Next()); // lambda
+            // good for moderate-sized lists. Very close to totally random
+
+            foreach (var p in sortedPeople)
+            {
+                Console.WriteLine(p.FirstName);
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void SimpleMethod(Random random)
+        {
+            // do not create a new Random object!
+            Console.WriteLine(random.Next());
+
+
+        }
+    }
+```
+
