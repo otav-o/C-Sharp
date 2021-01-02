@@ -219,3 +219,14 @@ public class CourseProductModel : IProductModel
 }
 ```
 
+### Abstract classes
+
+```c#
+List<IDataAccess> databases = new List<IDataAccess>()
+{
+    new SqlDataAccess(),
+    new SqliteDataAccess()
+};
+```
+
+// 12 minutes
