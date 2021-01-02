@@ -1,0 +1,6 @@
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\InterfacesInCSharp\InterfaceDemo_Start\DemoLibrary\bin\Debug\DemoLibrary.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\InterfacesInCSharp\InterfaceDemo_Start\DemoLibrary\bin\Debug\DemoLibrary.pdb
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\InterfacesInCSharp\InterfaceDemo_Start\DemoLibrary\obj\Debug\DemoLibrary.csprojAssemblyReference.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\InterfacesInCSharp\InterfaceDemo_Start\DemoLibrary\obj\Debug\DemoLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\InterfacesInCSharp\InterfaceDemo_Start\DemoLibrary\obj\Debug\DemoLibrary.dll
+C:\Users\Otávio estudos\Documents\Vivobook GitHub\C-Sharp\Advanced Topics in C# (With Tim Corey)\InterfacesInCSharp\InterfaceDemo_Start\DemoLibrary\obj\Debug\DemoLibrary.pdb

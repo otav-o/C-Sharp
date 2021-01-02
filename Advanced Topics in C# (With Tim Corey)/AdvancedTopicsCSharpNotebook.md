@@ -1,3 +1,5 @@
+# this notebook is a mess and should be taken as a draft
+
 ## 1. C# Access Modifiers for methods
 
 16 December 2020, Otávio
@@ -178,5 +180,42 @@ class Program
 
         }
     }
+```
+
+## Interfaces in C#
+
+Sometimes inheritance does not solve the problem
+
+Shortcut for creating a interface: ctrl + . with cursor in a class and "extract interface"
+
+```c#
+foreach (IProductModel prod in cart)
+{
+    prod.ShipItem(customer);
+    // here we can only access properties and methods from IProductModel
+
+    if (prod is IDigitalProductModel digital)
+    {
+        Console.WriteLine($"For the { digital.Title } you have { digital.TotalDownloadsLeft } downloads left");
+        // Title would not be visible if both interfaces were signed separatelly in DigitalProductModel class and the type were IDigitalProductModel
+    }
+}
+```
+
+```c#
+public interface IDigitalProductModel : IProductModel
+{
+    // an interface that implements another interface
+    // you can use only the more specific (see DigitalProductModel implements IDigitalProductModel and is implicity that IProductModel was signed too)
+    int TotalDownloadsLeft { get; }
+
+    // IDigitalProductModel receives all stuff form IProductModel
+}
+```
+
+```c#
+public class CourseProductModel : IProductModel
+{
+}
 ```
 
