@@ -7,6 +7,8 @@ namespace Generics
         static void Main(string[] args)
         {
             Start();
+            Console.WriteLine("---");
+            TestMultiGenerics("olá", true);
         }
 
         private static void Start()
@@ -15,6 +17,12 @@ namespace Generics
             PrintArray<int>(intArray);
             PrintArray<string>(CreateArray("Oi", "Olá"));
             PrintArray(CreateArray<double>(5, 6));
+        }
+
+        private static void TestMultiGenerics<T1, T2>(T1 t1, T2 t2)
+        {
+            Console.WriteLine(t1.GetType());
+            Console.WriteLine(t2.GetType());
         }
 
         private static T[] CreateArray<T>(T firstElement, T secondElement)
