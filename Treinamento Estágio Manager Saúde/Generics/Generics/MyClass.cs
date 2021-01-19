@@ -6,12 +6,11 @@ namespace Generics
 {
     class MyClass<T> where T: IEnemy
     {
-        public T value;
+        public T valor;
 
-        public MyClass(T value)
+        public MyClass(T valor)
         {
-            this.value = value;
-            value.Damage();
+            valor.Damage();
         }
 
         private T[] CreateArray(T first, T second)
