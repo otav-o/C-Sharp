@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Generics
 {
-    class MyClass<T> where T: IEnemy
+    class MyClass<T> where T: class, IEnemy<int>
     {
         public T valor;
 
-        public MyClass(T valor)
+        public MyClass(T valor, int inteiro)
         {
-            valor.Damage();
+            valor.Damage(inteiro);
         }
 
         private T[] CreateArray(T first, T second)

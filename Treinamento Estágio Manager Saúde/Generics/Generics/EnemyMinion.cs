@@ -4,11 +4,15 @@ using System.Text;
 
 namespace Generics
 {
-    class EnemyMinion : IEnemy
+    class EnemyMinion : IEnemy<int>
     {
-        public void Damage()
+        public EnemyMinion()
         {
-            Console.WriteLine("Procedimento Damage() de EnemyMinion, que herda de IEnemy");
+
+        }
+        public void Damage(int a)
+        {
+            Console.WriteLine("Procedimento Damage() de EnemyMinion, que herda de IEnemy" + a);
         }
     }
 }

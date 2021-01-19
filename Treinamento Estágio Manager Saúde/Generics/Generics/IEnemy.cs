@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Generics
 {
-    interface IEnemy
+    interface IEnemy<T>
     {
-        void Damage();
+        void Damage(T t);
     }
 }

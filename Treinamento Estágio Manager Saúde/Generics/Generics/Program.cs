@@ -13,8 +13,10 @@ namespace Generics
             // MyClass<int> myClass = new MyClass<int>();
                 // não funciona pois int não implementa a interface. T deve implementar IEnemy, pois usou-se o where
 
-            MyClass<IEnemy> myClass = new MyClass<IEnemy>(new EnemyMinion());
-            MyClass<EnemyArcher> myClass2 = new MyClass<EnemyArcher>(new EnemyArcher());
+            MyClass<EnemyMinion> myClass = new MyClass<EnemyMinion>(new EnemyMinion(), 10);
+            MyClass<EnemyArcher> myClass2 = new MyClass<EnemyArcher>(new EnemyArcher(), 15);
+
+            // instancia EnemyMinion e EnemyArcher e adiciona a "valor" de MyClass. Os objetos são inseridos sem problemas pois se adequam à cláusula where. Lá, podem usar seus métodos
 
             // MyClass<EnemyMinion> myClass3 = new MyClass<EnemyMinion>(new EnemyArcher());
             // O tipo de MyClass<> deve ser o mesmo do parâmetro (ambos são T)

@@ -4,11 +4,12 @@ using System.Text;
 
 namespace Generics
 {
-    class EnemyArcher : IEnemy
+    class EnemyArcher : IEnemy<int>
     {
-        public void Damage()
+        public EnemyArcher() { }
+        public void Damage(int t)
         {
-            Console.WriteLine("Damage() da classe EnemyArcher, que implementa IEnemy");
+            Console.WriteLine("Damage() da classe EnemyArcher, que implementa IEnemy" + t);
         }
     }
 }
