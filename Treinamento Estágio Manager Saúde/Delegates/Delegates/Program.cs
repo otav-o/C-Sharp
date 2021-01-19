@@ -9,23 +9,31 @@ namespace Delegates
 
         private TestDelegate testDelegateFunction;
         private TestBoolDelegate testBoolDelegateFunction;
+
+        private Action testAction; // na maioria dos casos é melhor usar Action/Func no lugar de Delegates
+        private Action<int, float> testIntFloatAction;
+
+        private Func<bool> noParametersFunc;
+        private Func<int, bool> testIntBoolFunc;
+
+            // action: void; func: retorna valor - é sempre o último tipo definido entre < >
         static void Main(string[] args)
         {
             var p1 = new Program();
-            p1.testDelegateFunction = delegate () { Console.WriteLine("Anonymous method"); };
-            // método anônimo deve seguir a assinatura do delegate (inclusive os parâmetros)
+            p1.testDelegateFunction += delegate () { Console.WriteLine("Anonymous method"); };
+            p1.testDelegateFunction += () => { Console.WriteLine("Lambda expression"); };
 
-            p1.testDelegateFunction();
+            p1.testDelegateFunction(); // Não é possível remover uma função anônima ou Lambda de um delegate, já que não há referência a ela.
 
-            p1.testDelegateFunction = () => { Console.WriteLine("Lambda expression"); };
+            p1.testIntFloatAction = (int i, float f) => { Console.WriteLine("Test int float action!"); };
 
-            p1.testDelegateFunction();
+            p1.noParametersFunc = () => false;
+            p1.testIntBoolFunc = (int i) => i < 5;
 
-            p1.testBoolDelegateFunction = (int i) => { return i < 5; };
-            p1.testBoolDelegateFunction = (int i) => i < 5; 
-                // modo + compacto se a função tiver apenas uma linha
+            Console.WriteLine(p1.noParametersFunc());
+            Console.WriteLine(p1.testIntBoolFunc(3));
 
-            Console.WriteLine(p1.testBoolDelegateFunction(4));
+
         }
         private void MyTestDelegateFunction() // declação de função que condiz com o delegate
         {
