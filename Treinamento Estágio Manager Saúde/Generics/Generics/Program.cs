@@ -12,13 +12,19 @@ namespace Generics
         private static void Start()
         {
             int[] intArray = CreateArray(5, 6);
-            Console.WriteLine("Tipo: " + intArray.GetType() + "\nTamanho: " + intArray.Length + "\nPosição 1: " + intArray[0] + "\nPosição 2: " + intArray[1]);
-
+            PrintArray<int>(intArray);
+            PrintArray<string>(CreateArray("Oi", "Olá"));
+            PrintArray(CreateArray<double>(5, 6));
         }
 
-        private static int[] CreateArray(int firstElement, int secondElement)
+        private static T[] CreateArray<T>(T firstElement, T secondElement)
         {
-            return new int[] { firstElement, secondElement };
+            return new T[] { firstElement, secondElement };
+        }
+
+        private static void PrintArray<T>(T[] vetor)
+        {
+            Console.WriteLine("Tipo: " + vetor.GetType() + "\nTamanho: " + vetor.Length + "\nPosição 1: " + vetor[0] + "\nPosição 2: " + vetor[1]);
         }
     }
 }
