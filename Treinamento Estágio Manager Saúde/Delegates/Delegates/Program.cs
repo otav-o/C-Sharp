@@ -5,17 +5,30 @@ namespace Delegates
     class Program
     {
         public delegate void TestDelegate(); // define um tipo de delegate
+
         private TestDelegate testDelegateFunction;
         static void Main(string[] args)
         {
             var p1 = new Program();
-            p1.testDelegateFunction = p1.MyTestDelegateFunction;
+            p1.testDelegateFunction += p1.MyTestDelegateFunction;
             // atribui a função ao delegate. Ela fica guardada lá e pode ser acessada pelo nome adicionado de parâmetros
-            p1.testDelegateFunction();
+
+            p1.testDelegateFunction += p1.MySecondTestDelegateFunction; 
+
+            p1.testDelegateFunction(); // chama as duas funções
+
+            p1.testDelegateFunction -= p1.MySecondTestDelegateFunction; // remoção de uma função
+
+            p1.testDelegateFunction(); // chama só a primeira
         }
         private void MyTestDelegateFunction() // declação de função que condiz com o delegate
         {
             Console.WriteLine("Testing MyTestDelegateFunction");
+        }
+
+        private void MySecondTestDelegateFunction()
+        {
+            Console.WriteLine("MySecondTestDelegateFunction");
         }
     }
 }
