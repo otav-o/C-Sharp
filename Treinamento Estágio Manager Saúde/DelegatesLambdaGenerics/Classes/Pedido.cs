@@ -12,5 +12,7 @@ namespace Classes
         public double ValorTotal { get; set; }
         public T Objeto { get; set; }
 
+        
+
     }
 }

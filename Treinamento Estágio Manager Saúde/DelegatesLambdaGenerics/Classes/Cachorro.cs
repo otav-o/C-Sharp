@@ -14,6 +14,20 @@ namespace Classes
         public string Raca { get; set; }
         public string Cidade { get; set; }
         public Pessoa Dono { get; set; }
+        
+        public void Latir()
+        {
+            Console.WriteLine($"{this.Nome} diz: \"au-au\".");
+        }
 
+        public Action<Cachorro> Lamber = (Cachorro c) =>
+        {
+            Console.WriteLine($"{c.Nome} lambeu o sofá.");
+        };
+
+        public void FazerAlgo(this Cachorro c, Action procedimento)
+        {
+            
+        }
     }
 }
