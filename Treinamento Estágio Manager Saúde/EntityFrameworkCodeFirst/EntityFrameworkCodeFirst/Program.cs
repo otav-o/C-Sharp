@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace EntityFrameworkCodeFirst
 {
@@ -6,7 +7,13 @@ namespace EntityFrameworkCodeFirst
     {
         static void Main(string[] args)
         {
-            Console.ReadLine();
+            using (var context = new ClienteContext())
+            {
+                var quantidadeClientes = context.Clientes.Count();
+                context.Clientes.Add(new Cliente() { Nome = "Danilo", Telefone = "8888891289" });
+                context.SaveChanges(); // pega o objeto e insere
+            }
+            Console.WriteLine("Fim do programa");
         }
     }
 }
