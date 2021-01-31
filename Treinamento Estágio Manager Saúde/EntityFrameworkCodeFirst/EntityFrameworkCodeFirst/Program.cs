@@ -14,6 +14,9 @@ namespace EntityFrameworkCodeFirst
 
                 context.Produtos.Add(new Produto() { Nome = "Câmera", Descricao = "Muito boa" });
                 context.SaveChanges();
+
+                var query = context.Clientes.Where(c => c.Nome.Contains("Danilo")).ToString();
+                var clientes = context.Clientes.Where(c => c.Nome.Contains("Danilo")).ToList(); // retorna os modelos
             }
             Console.WriteLine("Fim do programa");
         }
