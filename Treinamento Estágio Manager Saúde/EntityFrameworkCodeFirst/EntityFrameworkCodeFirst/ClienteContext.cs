@@ -9,6 +9,8 @@ namespace EntityFrameworkCodeFirst
     public class ClienteContext : DbContext
     {
         public DbSet<Cliente> Clientes { get; set; } // Tabela do tipo Cliente chamada "Clientes". As propriedades da classe Cliente serão as colunas
+        public DbSet<Produto> Produtos { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
